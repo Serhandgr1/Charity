@@ -1,0 +1,102 @@
+﻿@using Entities.Enum
+
+@{
+    ViewData["Title"] = "Add Staff";
+    Layout = "~/Areas/Admin/Views/Shared/Admin_Layout.cshtml";
+}
+
+@model StaffDto
+
+<!-- Start Content-->
+<div class="container-fluid">
+    <!-- end page title -->
+    <div class="row">
+        <div class="col-xl-6">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="header-title">Add Staff </h4>
+                </div>
+                <div class="card-body">
+                    <form asp-action="Add" asp-controller="Staff" method="post" enctype="multipart/form-data">
+                        <ul class="nav nav-pills bg-nav-pills nav-justified mb-3" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <a href="#english" data-bs-toggle="tab" aria-expanded="true" class="nav-link rounded-0 active" aria-selected="true" role="tab">
+                                    English
+                                </a>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <a href="#kurdish" data-bs-toggle="tab" aria-expanded="false" class="nav-link rounded-0" aria-selected="false" role="tab" tabindex="-1">
+                                    Kurdish
+                                </a>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <a href="#turkish" data-bs-toggle="tab" aria-expanded="false" class="nav-link rounded-0" aria-selected="false" role="tab" tabindex="-1">
+                                    Turkish
+                                </a>
+                            </li>
+                        </ul>
+
+                        <div class="tab-content">
+                            <div class="tab-pane active show" id="english" role="tabpanel">
+                                <div class="mb-3">
+                                    <label for="simpleinput" class="form-label">Full Name</label>
+                                    <input type="text" name="FullName" asp-for="FullName" class="form-control">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="simpleinput" class="form-label">Content (En)</label>
+                                    <textarea id="Content" asp-for="Content" name="Content"></textarea>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="kurdish" role="tabpanel">
+                                <div class="mb-3">
+                                    <label for="simpleinput" class="form-label">Content (Kr)</label>
+                                    <textarea id="ContentKr" asp-for="ContentKr" name="ContentKr"></textarea>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="turkish" role="tabpanel">
+                                <div class="mb-3">
+                                    <label for="simpleinput" class="form-label">Content (Tr)</label>
+                                    <textarea id="ContentTr" asp-for="ContentTr" name="ContentTr"></textarea>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="example-fileinput" class="form-label">Image</label>
+                                <input type="file" asp-for="FormFile" name="FormFile" class="form-control">
+                            </div>
+                            <div style="text-align: right;">
+                                <button type="submit" class="btn btn-primary">Add</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div> <!-- end card-body -->
+        </div> <!-- end card-->
+    </div>
+</div><!-- end row -->
+
+<script>
+    ClassicEditor
+        .create(document.querySelector('#Content'))
+        .then(editor => {
+            console.log(editor);
+        })
+        .catch(error => {
+            console.error(error);
+        });
+    ClassicEditor
+        .create(document.querySelector('#ContentKr'))
+        .then(editor => {
+            console.log(editor);
+        })
+        .catch(error => {
+            console.error(error);
+        });
+    ClassicEditor
+        .create(document.querySelector('#ContentTr'))
+        .then(editor => {
+            console.log(editor);
+        })
+        .catch(error => {
+            console.error(error);
+        });
+</script>

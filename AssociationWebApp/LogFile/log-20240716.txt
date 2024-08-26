@@ -1,0 +1,315 @@
+2024-07-16T15:26:11.8545507+03:00 0HN55I9L7OUTH:0000000F [ERR] The view '"Index"' was not found. Searched locations: ["/Views/User/Index.en-US.en-US.cshtml", "/Views/User/Index.en.en-US.cshtml", "/Views/User/Index.en-US.cshtml", "/Views/User/Index.en-US.en.cshtml", "/Views/User/Index.en.en.cshtml", "/Views/User/Index.en.cshtml", "/Views/User/Index.en-US.cshtml", "/Views/User/Index.en.cshtml", "/Views/User/Index.cshtml", "/Views/Shared/Index.en-US.en-US.cshtml", "/Views/Shared/Index.en.en-US.cshtml", "/Views/Shared/Index.en-US.cshtml", "/Views/Shared/Index.en-US.en.cshtml", "/Views/Shared/Index.en.en.cshtml", "/Views/Shared/Index.en.cshtml", "/Views/Shared/Index.en-US.cshtml", "/Views/Shared/Index.en.cshtml", "/Views/Shared/Index.cshtml", "/Pages/Shared/Index.en-US.en-US.cshtml", "/Pages/Shared/Index.en.en-US.cshtml", "/Pages/Shared/Index.en-US.cshtml", "/Pages/Shared/Index.en-US.en.cshtml", "/Pages/Shared/Index.en.en.cshtml", "/Pages/Shared/Index.en.cshtml", "/Pages/Shared/Index.en-US.cshtml", "/Pages/Shared/Index.en.cshtml", "/Pages/Shared/Index.cshtml"] (9bb2756c)
+2024-07-16T15:26:11.8867469+03:00 0HN55I9L7OUTH:0000000F [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.InvalidOperationException: The view 'Index' was not found. The following locations were searched:
+/Views/User/Index.en-US.en-US.cshtml
+/Views/User/Index.en.en-US.cshtml
+/Views/User/Index.en-US.cshtml
+/Views/User/Index.en-US.en.cshtml
+/Views/User/Index.en.en.cshtml
+/Views/User/Index.en.cshtml
+/Views/User/Index.en-US.cshtml
+/Views/User/Index.en.cshtml
+/Views/User/Index.cshtml
+/Views/Shared/Index.en-US.en-US.cshtml
+/Views/Shared/Index.en.en-US.cshtml
+/Views/Shared/Index.en-US.cshtml
+/Views/Shared/Index.en-US.en.cshtml
+/Views/Shared/Index.en.en.cshtml
+/Views/Shared/Index.en.cshtml
+/Views/Shared/Index.en-US.cshtml
+/Views/Shared/Index.en.cshtml
+/Views/Shared/Index.cshtml
+/Pages/Shared/Index.en-US.en-US.cshtml
+/Pages/Shared/Index.en.en-US.cshtml
+/Pages/Shared/Index.en-US.cshtml
+/Pages/Shared/Index.en-US.en.cshtml
+/Pages/Shared/Index.en.en.cshtml
+/Pages/Shared/Index.en.cshtml
+/Pages/Shared/Index.en-US.cshtml
+/Pages/Shared/Index.en.cshtml
+/Pages/Shared/Index.cshtml
+   at Microsoft.AspNetCore.Mvc.ViewEngines.ViewEngineResult.EnsureSuccessful(IEnumerable`1 originalLocations)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at AssociationWebApp.Localization.LocalizationMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\PC\source\repos\Charity\AssociationWebApp\Localization\LocalizationMiddleware.cs:line 21
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2024-07-16T15:27:34.5875266+03:00 0HN55I9L7OUTH:00000015 [ERR] The view '"Index"' was not found. Searched locations: ["/Views/User/Index.en-US.en-US.cshtml", "/Views/User/Index.en.en-US.cshtml", "/Views/User/Index.en-US.cshtml", "/Views/User/Index.en-US.en.cshtml", "/Views/User/Index.en.en.cshtml", "/Views/User/Index.en.cshtml", "/Views/User/Index.en-US.cshtml", "/Views/User/Index.en.cshtml", "/Views/User/Index.cshtml", "/Views/Shared/Index.en-US.en-US.cshtml", "/Views/Shared/Index.en.en-US.cshtml", "/Views/Shared/Index.en-US.cshtml", "/Views/Shared/Index.en-US.en.cshtml", "/Views/Shared/Index.en.en.cshtml", "/Views/Shared/Index.en.cshtml", "/Views/Shared/Index.en-US.cshtml", "/Views/Shared/Index.en.cshtml", "/Views/Shared/Index.cshtml", "/Pages/Shared/Index.en-US.en-US.cshtml", "/Pages/Shared/Index.en.en-US.cshtml", "/Pages/Shared/Index.en-US.cshtml", "/Pages/Shared/Index.en-US.en.cshtml", "/Pages/Shared/Index.en.en.cshtml", "/Pages/Shared/Index.en.cshtml", "/Pages/Shared/Index.en-US.cshtml", "/Pages/Shared/Index.en.cshtml", "/Pages/Shared/Index.cshtml"] (9bb2756c)
+2024-07-16T15:27:34.6166431+03:00 0HN55I9L7OUTH:00000015 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.InvalidOperationException: The view 'Index' was not found. The following locations were searched:
+/Views/User/Index.en-US.en-US.cshtml
+/Views/User/Index.en.en-US.cshtml
+/Views/User/Index.en-US.cshtml
+/Views/User/Index.en-US.en.cshtml
+/Views/User/Index.en.en.cshtml
+/Views/User/Index.en.cshtml
+/Views/User/Index.en-US.cshtml
+/Views/User/Index.en.cshtml
+/Views/User/Index.cshtml
+/Views/Shared/Index.en-US.en-US.cshtml
+/Views/Shared/Index.en.en-US.cshtml
+/Views/Shared/Index.en-US.cshtml
+/Views/Shared/Index.en-US.en.cshtml
+/Views/Shared/Index.en.en.cshtml
+/Views/Shared/Index.en.cshtml
+/Views/Shared/Index.en-US.cshtml
+/Views/Shared/Index.en.cshtml
+/Views/Shared/Index.cshtml
+/Pages/Shared/Index.en-US.en-US.cshtml
+/Pages/Shared/Index.en.en-US.cshtml
+/Pages/Shared/Index.en-US.cshtml
+/Pages/Shared/Index.en-US.en.cshtml
+/Pages/Shared/Index.en.en.cshtml
+/Pages/Shared/Index.en.cshtml
+/Pages/Shared/Index.en-US.cshtml
+/Pages/Shared/Index.en.cshtml
+/Pages/Shared/Index.cshtml
+   at Microsoft.AspNetCore.Mvc.ViewEngines.ViewEngineResult.EnsureSuccessful(IEnumerable`1 originalLocations)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at AssociationWebApp.Localization.LocalizationMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\PC\source\repos\Charity\AssociationWebApp\Localization\LocalizationMiddleware.cs:line 21
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2024-07-16T15:28:11.4212088+03:00 0HN55IAQQ1K78:0000000F [ERR] The view '"Index"' was not found. Searched locations: ["/Views/User/Index.en-US.en-US.cshtml", "/Views/User/Index.en.en-US.cshtml", "/Views/User/Index.en-US.cshtml", "/Views/User/Index.en-US.en.cshtml", "/Views/User/Index.en.en.cshtml", "/Views/User/Index.en.cshtml", "/Views/User/Index.en-US.cshtml", "/Views/User/Index.en.cshtml", "/Views/User/Index.cshtml", "/Views/Shared/Index.en-US.en-US.cshtml", "/Views/Shared/Index.en.en-US.cshtml", "/Views/Shared/Index.en-US.cshtml", "/Views/Shared/Index.en-US.en.cshtml", "/Views/Shared/Index.en.en.cshtml", "/Views/Shared/Index.en.cshtml", "/Views/Shared/Index.en-US.cshtml", "/Views/Shared/Index.en.cshtml", "/Views/Shared/Index.cshtml", "/Pages/Shared/Index.en-US.en-US.cshtml", "/Pages/Shared/Index.en.en-US.cshtml", "/Pages/Shared/Index.en-US.cshtml", "/Pages/Shared/Index.en-US.en.cshtml", "/Pages/Shared/Index.en.en.cshtml", "/Pages/Shared/Index.en.cshtml", "/Pages/Shared/Index.en-US.cshtml", "/Pages/Shared/Index.en.cshtml", "/Pages/Shared/Index.cshtml"] (9bb2756c)
+2024-07-16T15:28:11.4655228+03:00 0HN55IAQQ1K78:0000000F [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.InvalidOperationException: The view 'Index' was not found. The following locations were searched:
+/Views/User/Index.en-US.en-US.cshtml
+/Views/User/Index.en.en-US.cshtml
+/Views/User/Index.en-US.cshtml
+/Views/User/Index.en-US.en.cshtml
+/Views/User/Index.en.en.cshtml
+/Views/User/Index.en.cshtml
+/Views/User/Index.en-US.cshtml
+/Views/User/Index.en.cshtml
+/Views/User/Index.cshtml
+/Views/Shared/Index.en-US.en-US.cshtml
+/Views/Shared/Index.en.en-US.cshtml
+/Views/Shared/Index.en-US.cshtml
+/Views/Shared/Index.en-US.en.cshtml
+/Views/Shared/Index.en.en.cshtml
+/Views/Shared/Index.en.cshtml
+/Views/Shared/Index.en-US.cshtml
+/Views/Shared/Index.en.cshtml
+/Views/Shared/Index.cshtml
+/Pages/Shared/Index.en-US.en-US.cshtml
+/Pages/Shared/Index.en.en-US.cshtml
+/Pages/Shared/Index.en-US.cshtml
+/Pages/Shared/Index.en-US.en.cshtml
+/Pages/Shared/Index.en.en.cshtml
+/Pages/Shared/Index.en.cshtml
+/Pages/Shared/Index.en-US.cshtml
+/Pages/Shared/Index.en.cshtml
+/Pages/Shared/Index.cshtml
+   at Microsoft.AspNetCore.Mvc.ViewEngines.ViewEngineResult.EnsureSuccessful(IEnumerable`1 originalLocations)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at AssociationWebApp.Localization.LocalizationMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\PC\source\repos\Charity\AssociationWebApp\Localization\LocalizationMiddleware.cs:line 21
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2024-07-16T15:33:54.7307478+03:00 0HN55IDQQB626:00000017 [ERR] The view '"Index"' was not found. Searched locations: ["/Views/User/Index.en-US.en-US.cshtml", "/Views/User/Index.en.en-US.cshtml", "/Views/User/Index.en-US.cshtml", "/Views/User/Index.en-US.en.cshtml", "/Views/User/Index.en.en.cshtml", "/Views/User/Index.en.cshtml", "/Views/User/Index.en-US.cshtml", "/Views/User/Index.en.cshtml", "/Views/User/Index.cshtml", "/Views/Shared/Index.en-US.en-US.cshtml", "/Views/Shared/Index.en.en-US.cshtml", "/Views/Shared/Index.en-US.cshtml", "/Views/Shared/Index.en-US.en.cshtml", "/Views/Shared/Index.en.en.cshtml", "/Views/Shared/Index.en.cshtml", "/Views/Shared/Index.en-US.cshtml", "/Views/Shared/Index.en.cshtml", "/Views/Shared/Index.cshtml", "/Pages/Shared/Index.en-US.en-US.cshtml", "/Pages/Shared/Index.en.en-US.cshtml", "/Pages/Shared/Index.en-US.cshtml", "/Pages/Shared/Index.en-US.en.cshtml", "/Pages/Shared/Index.en.en.cshtml", "/Pages/Shared/Index.en.cshtml", "/Pages/Shared/Index.en-US.cshtml", "/Pages/Shared/Index.en.cshtml", "/Pages/Shared/Index.cshtml"] (9bb2756c)
+2024-07-16T15:33:54.7662105+03:00 0HN55IDQQB626:00000017 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.InvalidOperationException: The view 'Index' was not found. The following locations were searched:
+/Views/User/Index.en-US.en-US.cshtml
+/Views/User/Index.en.en-US.cshtml
+/Views/User/Index.en-US.cshtml
+/Views/User/Index.en-US.en.cshtml
+/Views/User/Index.en.en.cshtml
+/Views/User/Index.en.cshtml
+/Views/User/Index.en-US.cshtml
+/Views/User/Index.en.cshtml
+/Views/User/Index.cshtml
+/Views/Shared/Index.en-US.en-US.cshtml
+/Views/Shared/Index.en.en-US.cshtml
+/Views/Shared/Index.en-US.cshtml
+/Views/Shared/Index.en-US.en.cshtml
+/Views/Shared/Index.en.en.cshtml
+/Views/Shared/Index.en.cshtml
+/Views/Shared/Index.en-US.cshtml
+/Views/Shared/Index.en.cshtml
+/Views/Shared/Index.cshtml
+/Pages/Shared/Index.en-US.en-US.cshtml
+/Pages/Shared/Index.en.en-US.cshtml
+/Pages/Shared/Index.en-US.cshtml
+/Pages/Shared/Index.en-US.en.cshtml
+/Pages/Shared/Index.en.en.cshtml
+/Pages/Shared/Index.en.cshtml
+/Pages/Shared/Index.en-US.cshtml
+/Pages/Shared/Index.en.cshtml
+/Pages/Shared/Index.cshtml
+   at Microsoft.AspNetCore.Mvc.ViewEngines.ViewEngineResult.EnsureSuccessful(IEnumerable`1 originalLocations)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at AssociationWebApp.Localization.LocalizationMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\PC\source\repos\Charity\AssociationWebApp\Localization\LocalizationMiddleware.cs:line 21
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2024-07-16T15:35:39.6242024+03:00 0HN55IETI5ND1:0000000F [ERR] The view '"Index"' was not found. Searched locations: ["/Views/User/Index.en-US.en-US.cshtml", "/Views/User/Index.en.en-US.cshtml", "/Views/User/Index.en-US.cshtml", "/Views/User/Index.en-US.en.cshtml", "/Views/User/Index.en.en.cshtml", "/Views/User/Index.en.cshtml", "/Views/User/Index.en-US.cshtml", "/Views/User/Index.en.cshtml", "/Views/User/Index.cshtml", "/Views/Shared/Index.en-US.en-US.cshtml", "/Views/Shared/Index.en.en-US.cshtml", "/Views/Shared/Index.en-US.cshtml", "/Views/Shared/Index.en-US.en.cshtml", "/Views/Shared/Index.en.en.cshtml", "/Views/Shared/Index.en.cshtml", "/Views/Shared/Index.en-US.cshtml", "/Views/Shared/Index.en.cshtml", "/Views/Shared/Index.cshtml", "/Pages/Shared/Index.en-US.en-US.cshtml", "/Pages/Shared/Index.en.en-US.cshtml", "/Pages/Shared/Index.en-US.cshtml", "/Pages/Shared/Index.en-US.en.cshtml", "/Pages/Shared/Index.en.en.cshtml", "/Pages/Shared/Index.en.cshtml", "/Pages/Shared/Index.en-US.cshtml", "/Pages/Shared/Index.en.cshtml", "/Pages/Shared/Index.cshtml"] (9bb2756c)
+2024-07-16T15:35:39.6421211+03:00 0HN55IETI5ND1:0000000F [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.InvalidOperationException: The view 'Index' was not found. The following locations were searched:
+/Views/User/Index.en-US.en-US.cshtml
+/Views/User/Index.en.en-US.cshtml
+/Views/User/Index.en-US.cshtml
+/Views/User/Index.en-US.en.cshtml
+/Views/User/Index.en.en.cshtml
+/Views/User/Index.en.cshtml
+/Views/User/Index.en-US.cshtml
+/Views/User/Index.en.cshtml
+/Views/User/Index.cshtml
+/Views/Shared/Index.en-US.en-US.cshtml
+/Views/Shared/Index.en.en-US.cshtml
+/Views/Shared/Index.en-US.cshtml
+/Views/Shared/Index.en-US.en.cshtml
+/Views/Shared/Index.en.en.cshtml
+/Views/Shared/Index.en.cshtml
+/Views/Shared/Index.en-US.cshtml
+/Views/Shared/Index.en.cshtml
+/Views/Shared/Index.cshtml
+/Pages/Shared/Index.en-US.en-US.cshtml
+/Pages/Shared/Index.en.en-US.cshtml
+/Pages/Shared/Index.en-US.cshtml
+/Pages/Shared/Index.en-US.en.cshtml
+/Pages/Shared/Index.en.en.cshtml
+/Pages/Shared/Index.en.cshtml
+/Pages/Shared/Index.en-US.cshtml
+/Pages/Shared/Index.en.cshtml
+/Pages/Shared/Index.cshtml
+   at Microsoft.AspNetCore.Mvc.ViewEngines.ViewEngineResult.EnsureSuccessful(IEnumerable`1 originalLocations)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2024-07-16T15:38:47.2479013+03:00 0HN55IGH0TIFF:00000023 [ERR] The view '"~/Areas/Admin/Views/User/Index"' was not found. Searched locations: ["~/Areas/Admin/Views/User/Index"] (9bb2756c)
+2024-07-16T15:38:47.2602747+03:00 0HN55IGH0TIFF:00000023 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.InvalidOperationException: The view '~/Areas/Admin/Views/User/Index' was not found. The following locations were searched:
+~/Areas/Admin/Views/User/Index
+   at Microsoft.AspNetCore.Mvc.ViewEngines.ViewEngineResult.EnsureSuccessful(IEnumerable`1 originalLocations)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2024-07-16T15:56:04.8782132+03:00  [FTL] Application startup exception (6c57a5ba)
+System.InvalidOperationException: Scheme already exists: Identity.Application
+   at Microsoft.AspNetCore.Authentication.AuthenticationOptions.AddScheme(String name, Action`1 configureBuilder)
+   at Microsoft.AspNetCore.Authentication.AuthenticationBuilder.<>c__DisplayClass4_0`2.<AddSchemeHelper>b__0(AuthenticationOptions o)
+   at Microsoft.Extensions.Options.ConfigureNamedOptions`1.Configure(String name, TOptions options)
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at Microsoft.Extensions.Options.UnnamedOptionsManager`1.get_Value()
+   at Microsoft.AspNetCore.Authentication.AuthenticationSchemeProvider..ctor(IOptions`1 options, IDictionary`2 schemes)
+   at Microsoft.AspNetCore.Authentication.AuthenticationSchemeProvider..ctor(IOptions`1 options)
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Span`1& arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeConstructorInfo.Invoke(BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.CreateServiceAccessor(Type serviceType)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.ConstructorMatcher.CreateInstance(IServiceProvider provider)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass5_0.<UseMiddleware>b__0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.<ConfigureApplication>b__27_0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)

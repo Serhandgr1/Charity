@@ -1,0 +1,154 @@
+2024-07-15T14:50:09.2317704+03:00 0HN54OGIEUVH7:00000007 [ERR] The view '"Login"' was not found. Searched locations: ["/Areas/Admin/Views/Admin/Login.en-US.en-US.cshtml", "/Areas/Admin/Views/Admin/Login.en.en-US.cshtml", "/Areas/Admin/Views/Admin/Login.en-US.cshtml", "/Areas/Admin/Views/Admin/Login.en-US.en.cshtml", "/Areas/Admin/Views/Admin/Login.en.en.cshtml", "/Areas/Admin/Views/Admin/Login.en.cshtml", "/Areas/Admin/Views/Admin/Login.en-US.cshtml", "/Areas/Admin/Views/Admin/Login.en.cshtml", "/Areas/Admin/Views/Admin/Login.cshtml", "/Areas/Admin/Views/Shared/Login.en-US.en-US.cshtml", "/Areas/Admin/Views/Shared/Login.en.en-US.cshtml", "/Areas/Admin/Views/Shared/Login.en-US.cshtml", "/Areas/Admin/Views/Shared/Login.en-US.en.cshtml", "/Areas/Admin/Views/Shared/Login.en.en.cshtml", "/Areas/Admin/Views/Shared/Login.en.cshtml", "/Areas/Admin/Views/Shared/Login.en-US.cshtml", "/Areas/Admin/Views/Shared/Login.en.cshtml", "/Areas/Admin/Views/Shared/Login.cshtml", "/Views/Shared/Login.en-US.en-US.cshtml", "/Views/Shared/Login.en.en-US.cshtml", "/Views/Shared/Login.en-US.cshtml", "/Views/Shared/Login.en-US.en.cshtml", "/Views/Shared/Login.en.en.cshtml", "/Views/Shared/Login.en.cshtml", "/Views/Shared/Login.en-US.cshtml", "/Views/Shared/Login.en.cshtml", "/Views/Shared/Login.cshtml", "/Pages/Shared/Login.en-US.en-US.cshtml", "/Pages/Shared/Login.en.en-US.cshtml", "/Pages/Shared/Login.en-US.cshtml", "/Pages/Shared/Login.en-US.en.cshtml", "/Pages/Shared/Login.en.en.cshtml", "/Pages/Shared/Login.en.cshtml", "/Pages/Shared/Login.en-US.cshtml", "/Pages/Shared/Login.en.cshtml", "/Pages/Shared/Login.cshtml"] (9bb2756c)
+2024-07-15T14:50:09.2912834+03:00 0HN54OGIEUVH7:00000007 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.InvalidOperationException: The view 'Login' was not found. The following locations were searched:
+/Areas/Admin/Views/Admin/Login.en-US.en-US.cshtml
+/Areas/Admin/Views/Admin/Login.en.en-US.cshtml
+/Areas/Admin/Views/Admin/Login.en-US.cshtml
+/Areas/Admin/Views/Admin/Login.en-US.en.cshtml
+/Areas/Admin/Views/Admin/Login.en.en.cshtml
+/Areas/Admin/Views/Admin/Login.en.cshtml
+/Areas/Admin/Views/Admin/Login.en-US.cshtml
+/Areas/Admin/Views/Admin/Login.en.cshtml
+/Areas/Admin/Views/Admin/Login.cshtml
+/Areas/Admin/Views/Shared/Login.en-US.en-US.cshtml
+/Areas/Admin/Views/Shared/Login.en.en-US.cshtml
+/Areas/Admin/Views/Shared/Login.en-US.cshtml
+/Areas/Admin/Views/Shared/Login.en-US.en.cshtml
+/Areas/Admin/Views/Shared/Login.en.en.cshtml
+/Areas/Admin/Views/Shared/Login.en.cshtml
+/Areas/Admin/Views/Shared/Login.en-US.cshtml
+/Areas/Admin/Views/Shared/Login.en.cshtml
+/Areas/Admin/Views/Shared/Login.cshtml
+/Views/Shared/Login.en-US.en-US.cshtml
+/Views/Shared/Login.en.en-US.cshtml
+/Views/Shared/Login.en-US.cshtml
+/Views/Shared/Login.en-US.en.cshtml
+/Views/Shared/Login.en.en.cshtml
+/Views/Shared/Login.en.cshtml
+/Views/Shared/Login.en-US.cshtml
+/Views/Shared/Login.en.cshtml
+/Views/Shared/Login.cshtml
+/Pages/Shared/Login.en-US.en-US.cshtml
+/Pages/Shared/Login.en.en-US.cshtml
+/Pages/Shared/Login.en-US.cshtml
+/Pages/Shared/Login.en-US.en.cshtml
+/Pages/Shared/Login.en.en.cshtml
+/Pages/Shared/Login.en.cshtml
+/Pages/Shared/Login.en-US.cshtml
+/Pages/Shared/Login.en.cshtml
+/Pages/Shared/Login.cshtml
+   at Microsoft.AspNetCore.Mvc.ViewEngines.ViewEngineResult.EnsureSuccessful(IEnumerable`1 originalLocations)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at AssociationWebApp.Localization.LocalizationMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\PC\source\repos\Charity\AssociationWebApp\Localization\LocalizationMiddleware.cs:line 21
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2024-07-15T14:50:10.6792365+03:00 0HN54OGIEUVH7:00000009 [ERR] The view '"Login"' was not found. Searched locations: ["/Areas/Admin/Views/Admin/Login.en-US.en-US.cshtml", "/Areas/Admin/Views/Admin/Login.en.en-US.cshtml", "/Areas/Admin/Views/Admin/Login.en-US.cshtml", "/Areas/Admin/Views/Admin/Login.en-US.en.cshtml", "/Areas/Admin/Views/Admin/Login.en.en.cshtml", "/Areas/Admin/Views/Admin/Login.en.cshtml", "/Areas/Admin/Views/Admin/Login.en-US.cshtml", "/Areas/Admin/Views/Admin/Login.en.cshtml", "/Areas/Admin/Views/Admin/Login.cshtml", "/Areas/Admin/Views/Shared/Login.en-US.en-US.cshtml", "/Areas/Admin/Views/Shared/Login.en.en-US.cshtml", "/Areas/Admin/Views/Shared/Login.en-US.cshtml", "/Areas/Admin/Views/Shared/Login.en-US.en.cshtml", "/Areas/Admin/Views/Shared/Login.en.en.cshtml", "/Areas/Admin/Views/Shared/Login.en.cshtml", "/Areas/Admin/Views/Shared/Login.en-US.cshtml", "/Areas/Admin/Views/Shared/Login.en.cshtml", "/Areas/Admin/Views/Shared/Login.cshtml", "/Views/Shared/Login.en-US.en-US.cshtml", "/Views/Shared/Login.en.en-US.cshtml", "/Views/Shared/Login.en-US.cshtml", "/Views/Shared/Login.en-US.en.cshtml", "/Views/Shared/Login.en.en.cshtml", "/Views/Shared/Login.en.cshtml", "/Views/Shared/Login.en-US.cshtml", "/Views/Shared/Login.en.cshtml", "/Views/Shared/Login.cshtml", "/Pages/Shared/Login.en-US.en-US.cshtml", "/Pages/Shared/Login.en.en-US.cshtml", "/Pages/Shared/Login.en-US.cshtml", "/Pages/Shared/Login.en-US.en.cshtml", "/Pages/Shared/Login.en.en.cshtml", "/Pages/Shared/Login.en.cshtml", "/Pages/Shared/Login.en-US.cshtml", "/Pages/Shared/Login.en.cshtml", "/Pages/Shared/Login.cshtml"] (9bb2756c)
+2024-07-15T14:50:10.7142528+03:00 0HN54OGIEUVH7:00000009 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.InvalidOperationException: The view 'Login' was not found. The following locations were searched:
+/Areas/Admin/Views/Admin/Login.en-US.en-US.cshtml
+/Areas/Admin/Views/Admin/Login.en.en-US.cshtml
+/Areas/Admin/Views/Admin/Login.en-US.cshtml
+/Areas/Admin/Views/Admin/Login.en-US.en.cshtml
+/Areas/Admin/Views/Admin/Login.en.en.cshtml
+/Areas/Admin/Views/Admin/Login.en.cshtml
+/Areas/Admin/Views/Admin/Login.en-US.cshtml
+/Areas/Admin/Views/Admin/Login.en.cshtml
+/Areas/Admin/Views/Admin/Login.cshtml
+/Areas/Admin/Views/Shared/Login.en-US.en-US.cshtml
+/Areas/Admin/Views/Shared/Login.en.en-US.cshtml
+/Areas/Admin/Views/Shared/Login.en-US.cshtml
+/Areas/Admin/Views/Shared/Login.en-US.en.cshtml
+/Areas/Admin/Views/Shared/Login.en.en.cshtml
+/Areas/Admin/Views/Shared/Login.en.cshtml
+/Areas/Admin/Views/Shared/Login.en-US.cshtml
+/Areas/Admin/Views/Shared/Login.en.cshtml
+/Areas/Admin/Views/Shared/Login.cshtml
+/Views/Shared/Login.en-US.en-US.cshtml
+/Views/Shared/Login.en.en-US.cshtml
+/Views/Shared/Login.en-US.cshtml
+/Views/Shared/Login.en-US.en.cshtml
+/Views/Shared/Login.en.en.cshtml
+/Views/Shared/Login.en.cshtml
+/Views/Shared/Login.en-US.cshtml
+/Views/Shared/Login.en.cshtml
+/Views/Shared/Login.cshtml
+/Pages/Shared/Login.en-US.en-US.cshtml
+/Pages/Shared/Login.en.en-US.cshtml
+/Pages/Shared/Login.en-US.cshtml
+/Pages/Shared/Login.en-US.en.cshtml
+/Pages/Shared/Login.en.en.cshtml
+/Pages/Shared/Login.en.cshtml
+/Pages/Shared/Login.en-US.cshtml
+/Pages/Shared/Login.en.cshtml
+/Pages/Shared/Login.cshtml
+   at Microsoft.AspNetCore.Mvc.ViewEngines.ViewEngineResult.EnsureSuccessful(IEnumerable`1 originalLocations)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at AssociationWebApp.Localization.LocalizationMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\PC\source\repos\Charity\AssociationWebApp\Localization\LocalizationMiddleware.cs:line 21
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2024-07-15T18:27:27.0489925+03:00 0HN54SAD72H1T:00000007 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+Microsoft.AspNetCore.Routing.Matching.AmbiguousMatchException: The request matched multiple endpoints. Matches: 
+
+AssociationWebApp.Areas.Admin.Controllers.AdminController.SignIn (AssociationWebApp)
+AssociationWebApp.Areas.Admin.Controllers.AdminController.SignIn (AssociationWebApp)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ReportAmbiguity(CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ProcessFinalCandidates(HttpContext httpContext, CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.Select(HttpContext httpContext, CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcher.MatchAsync(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at AssociationWebApp.Localization.LocalizationMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\PC\source\repos\Charity\AssociationWebApp\Localization\LocalizationMiddleware.cs:line 21
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2024-07-15T18:27:28.0105266+03:00 0HN54SAD72H1T:00000009 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+Microsoft.AspNetCore.Routing.Matching.AmbiguousMatchException: The request matched multiple endpoints. Matches: 
+
+AssociationWebApp.Areas.Admin.Controllers.AdminController.SignIn (AssociationWebApp)
+AssociationWebApp.Areas.Admin.Controllers.AdminController.SignIn (AssociationWebApp)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ReportAmbiguity(CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ProcessFinalCandidates(HttpContext httpContext, CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.Select(HttpContext httpContext, CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcher.MatchAsync(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at AssociationWebApp.Localization.LocalizationMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\PC\source\repos\Charity\AssociationWebApp\Localization\LocalizationMiddleware.cs:line 21
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)

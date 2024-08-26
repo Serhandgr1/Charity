@@ -1,0 +1,33 @@
+﻿@model SettingDto
+
+<h2>Update Setting</h2>
+
+<form asp-action="Edit" method="post">
+    <div class="form-group">
+        <label asp-for="Logo"></label>
+        <input asp-for="Logo" class="form-control" />
+        <span asp-validation-for="Logo" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Email"></label>
+        <input asp-for="Email" class="form-control" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Phone"></label>
+        <input asp-for="Phone" class="form-control" />
+        <span asp-validation-for="Phone" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Mapping"></label>
+        <input asp-for="Mapping" class="form-control" />
+        <span asp-validation-for="Mapping" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Address"></label>
+        <input asp-for="Address" class="form-control" />
+        <span asp-validation-for="Address" class="text-danger"></span>
+    </div>
+    <input type="hidden" asp-for="Id" />
+    <button type="submit" class="btn btn-primary">Update</button>
+</form>

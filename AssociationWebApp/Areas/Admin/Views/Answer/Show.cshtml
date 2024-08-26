@@ -1,0 +1,36 @@
+﻿@model List<AnswerDto>
+
+<h1>Answers for Question @ViewData["QuestionId"]</h1>
+
+<!-- Başarı mesajını kontrol et ve göster -->
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["SuccessMessage"]
+    </div>
+}
+
+<table class="table mt-4">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Text</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var answer in Model)
+        {
+            <tr>
+                <td>@answer.Id</td>
+                <td>@answer.Text</td>
+                <td>
+                    <form method="post" action="@Url.Action("Delete", "Answer")">
+                        <input type="hidden" name="Id" value="@answer.Id" />
+                        <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this answer?')">Delete</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

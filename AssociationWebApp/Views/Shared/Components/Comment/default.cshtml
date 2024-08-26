@@ -1,0 +1,30 @@
+﻿@inject IViewLocalizer localizer
+@model ContactViewModel
+<div class="section-body">
+	<div class="slider-testimonials">
+		<div class="grid-container">
+			<div class="grid-x grid-margin-x">
+				<div class="slider-clip cell small-12">
+					<ul class="slides owl-carousel">
+						@foreach (var cmn in Model.Comments.TakeLast(5))
+						{
+							<li class="slide">
+								<div class="slide-entry">
+									<p>
+										@localizer[@cmn.Messagge] 
+									</p>
+								</div><!-- /.slide-entry -->
+
+								<div class="slide-foot">
+									<p>@localizer[@cmn.Name]</p>
+								</div><!-- /.slide-foot -->
+							</li>
+
+							<!-- /.slide -->
+						}
+					</ul><!-- /.slides -->
+				</div><!-- /.slider-clip -->
+			</div>
+		</div><!-- /.grid -->
+	</div><!-- /.slider-testimonials -->
+</div><!-- /.section-body -->

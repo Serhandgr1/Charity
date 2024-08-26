@@ -1,0 +1,365 @@
+2024-07-28T14:56:15.1774730+03:00 0HN5EVFNQK9MQ:0000000D [ERR] The view '"Login"' was not found. Searched locations: ["/Views/User/Login.en-US.en-US.cshtml", "/Views/User/Login.en.en-US.cshtml", "/Views/User/Login.en-US.cshtml", "/Views/User/Login.en-US.en.cshtml", "/Views/User/Login.en.en.cshtml", "/Views/User/Login.en.cshtml", "/Views/User/Login.en-US.cshtml", "/Views/User/Login.en.cshtml", "/Views/User/Login.cshtml", "/Views/Shared/Login.en-US.en-US.cshtml", "/Views/Shared/Login.en.en-US.cshtml", "/Views/Shared/Login.en-US.cshtml", "/Views/Shared/Login.en-US.en.cshtml", "/Views/Shared/Login.en.en.cshtml", "/Views/Shared/Login.en.cshtml", "/Views/Shared/Login.en-US.cshtml", "/Views/Shared/Login.en.cshtml", "/Views/Shared/Login.cshtml", "/Pages/Shared/Login.en-US.en-US.cshtml", "/Pages/Shared/Login.en.en-US.cshtml", "/Pages/Shared/Login.en-US.cshtml", "/Pages/Shared/Login.en-US.en.cshtml", "/Pages/Shared/Login.en.en.cshtml", "/Pages/Shared/Login.en.cshtml", "/Pages/Shared/Login.en-US.cshtml", "/Pages/Shared/Login.en.cshtml", "/Pages/Shared/Login.cshtml"] (9bb2756c)
+2024-07-28T14:56:15.3647975+03:00 0HN5EVFNQK9MQ:0000000D [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.InvalidOperationException: The view 'Login' was not found. The following locations were searched:
+/Views/User/Login.en-US.en-US.cshtml
+/Views/User/Login.en.en-US.cshtml
+/Views/User/Login.en-US.cshtml
+/Views/User/Login.en-US.en.cshtml
+/Views/User/Login.en.en.cshtml
+/Views/User/Login.en.cshtml
+/Views/User/Login.en-US.cshtml
+/Views/User/Login.en.cshtml
+/Views/User/Login.cshtml
+/Views/Shared/Login.en-US.en-US.cshtml
+/Views/Shared/Login.en.en-US.cshtml
+/Views/Shared/Login.en-US.cshtml
+/Views/Shared/Login.en-US.en.cshtml
+/Views/Shared/Login.en.en.cshtml
+/Views/Shared/Login.en.cshtml
+/Views/Shared/Login.en-US.cshtml
+/Views/Shared/Login.en.cshtml
+/Views/Shared/Login.cshtml
+/Pages/Shared/Login.en-US.en-US.cshtml
+/Pages/Shared/Login.en.en-US.cshtml
+/Pages/Shared/Login.en-US.cshtml
+/Pages/Shared/Login.en-US.en.cshtml
+/Pages/Shared/Login.en.en.cshtml
+/Pages/Shared/Login.en.cshtml
+/Pages/Shared/Login.en-US.cshtml
+/Pages/Shared/Login.en.cshtml
+/Pages/Shared/Login.cshtml
+   at Microsoft.AspNetCore.Mvc.ViewEngines.ViewEngineResult.EnsureSuccessful(IEnumerable`1 originalLocations)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at AssociationWebApp.Localization.LocalizationMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\PC\source\repos\Charity\AssociationWebApp\Localization\LocalizationMiddleware.cs:line 21
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2024-07-28T15:04:31.0039364+03:00 0HN5EVLI63C4V:0000000D [ERR] The view '"Login"' was not found. Searched locations: ["/Views/User/Login.en-US.en-US.cshtml", "/Views/User/Login.en.en-US.cshtml", "/Views/User/Login.en-US.cshtml", "/Views/User/Login.en-US.en.cshtml", "/Views/User/Login.en.en.cshtml", "/Views/User/Login.en.cshtml", "/Views/User/Login.en-US.cshtml", "/Views/User/Login.en.cshtml", "/Views/User/Login.cshtml", "/Views/Shared/Login.en-US.en-US.cshtml", "/Views/Shared/Login.en.en-US.cshtml", "/Views/Shared/Login.en-US.cshtml", "/Views/Shared/Login.en-US.en.cshtml", "/Views/Shared/Login.en.en.cshtml", "/Views/Shared/Login.en.cshtml", "/Views/Shared/Login.en-US.cshtml", "/Views/Shared/Login.en.cshtml", "/Views/Shared/Login.cshtml", "/Pages/Shared/Login.en-US.en-US.cshtml", "/Pages/Shared/Login.en.en-US.cshtml", "/Pages/Shared/Login.en-US.cshtml", "/Pages/Shared/Login.en-US.en.cshtml", "/Pages/Shared/Login.en.en.cshtml", "/Pages/Shared/Login.en.cshtml", "/Pages/Shared/Login.en-US.cshtml", "/Pages/Shared/Login.en.cshtml", "/Pages/Shared/Login.cshtml"] (9bb2756c)
+2024-07-28T15:04:31.1167619+03:00 0HN5EVLI63C4V:0000000D [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.InvalidOperationException: The view 'Login' was not found. The following locations were searched:
+/Views/User/Login.en-US.en-US.cshtml
+/Views/User/Login.en.en-US.cshtml
+/Views/User/Login.en-US.cshtml
+/Views/User/Login.en-US.en.cshtml
+/Views/User/Login.en.en.cshtml
+/Views/User/Login.en.cshtml
+/Views/User/Login.en-US.cshtml
+/Views/User/Login.en.cshtml
+/Views/User/Login.cshtml
+/Views/Shared/Login.en-US.en-US.cshtml
+/Views/Shared/Login.en.en-US.cshtml
+/Views/Shared/Login.en-US.cshtml
+/Views/Shared/Login.en-US.en.cshtml
+/Views/Shared/Login.en.en.cshtml
+/Views/Shared/Login.en.cshtml
+/Views/Shared/Login.en-US.cshtml
+/Views/Shared/Login.en.cshtml
+/Views/Shared/Login.cshtml
+/Pages/Shared/Login.en-US.en-US.cshtml
+/Pages/Shared/Login.en.en-US.cshtml
+/Pages/Shared/Login.en-US.cshtml
+/Pages/Shared/Login.en-US.en.cshtml
+/Pages/Shared/Login.en.en.cshtml
+/Pages/Shared/Login.en.cshtml
+/Pages/Shared/Login.en-US.cshtml
+/Pages/Shared/Login.en.cshtml
+/Pages/Shared/Login.cshtml
+   at Microsoft.AspNetCore.Mvc.ViewEngines.ViewEngineResult.EnsureSuccessful(IEnumerable`1 originalLocations)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at AssociationWebApp.Localization.LocalizationMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\PC\source\repos\Charity\AssociationWebApp\Localization\LocalizationMiddleware.cs:line 21
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2024-07-28T15:25:11.1176006+03:00 0HN5F00L5I7LI:0000002B [ERR] The instance of entity type 'Blog' cannot be tracked because another instance with the same key value for {'Id'} is already being tracked. When attaching existing entities, ensure that only one entity instance with a given key value is attached. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the conflicting key values. (d6615d59)
+2024-07-28T15:30:24.8608041+03:00 0HN5F03TEOH8J:0000002B [ERR] The instance of entity type 'Blog' cannot be tracked because another instance with the same key value for {'Id'} is already being tracked. When attaching existing entities, ensure that only one entity instance with a given key value is attached. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the conflicting key values. (d6615d59)
+2024-07-28T16:03:42.3780230+03:00 0HN5F0MHJV51R:00000021 [ERR] The view '"Show"' was not found. Searched locations: ["/Views/BlogImage/Show.en-US.en-US.cshtml", "/Views/BlogImage/Show.en.en-US.cshtml", "/Views/BlogImage/Show.en-US.cshtml", "/Views/BlogImage/Show.en-US.en.cshtml", "/Views/BlogImage/Show.en.en.cshtml", "/Views/BlogImage/Show.en.cshtml", "/Views/BlogImage/Show.en-US.cshtml", "/Views/BlogImage/Show.en.cshtml", "/Views/BlogImage/Show.cshtml", "/Views/Shared/Show.en-US.en-US.cshtml", "/Views/Shared/Show.en.en-US.cshtml", "/Views/Shared/Show.en-US.cshtml", "/Views/Shared/Show.en-US.en.cshtml", "/Views/Shared/Show.en.en.cshtml", "/Views/Shared/Show.en.cshtml", "/Views/Shared/Show.en-US.cshtml", "/Views/Shared/Show.en.cshtml", "/Views/Shared/Show.cshtml", "/Pages/Shared/Show.en-US.en-US.cshtml", "/Pages/Shared/Show.en.en-US.cshtml", "/Pages/Shared/Show.en-US.cshtml", "/Pages/Shared/Show.en-US.en.cshtml", "/Pages/Shared/Show.en.en.cshtml", "/Pages/Shared/Show.en.cshtml", "/Pages/Shared/Show.en-US.cshtml", "/Pages/Shared/Show.en.cshtml", "/Pages/Shared/Show.cshtml"] (9bb2756c)
+2024-07-28T16:03:42.4317251+03:00 0HN5F0MHJV51R:00000021 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.InvalidOperationException: The view 'Show' was not found. The following locations were searched:
+/Views/BlogImage/Show.en-US.en-US.cshtml
+/Views/BlogImage/Show.en.en-US.cshtml
+/Views/BlogImage/Show.en-US.cshtml
+/Views/BlogImage/Show.en-US.en.cshtml
+/Views/BlogImage/Show.en.en.cshtml
+/Views/BlogImage/Show.en.cshtml
+/Views/BlogImage/Show.en-US.cshtml
+/Views/BlogImage/Show.en.cshtml
+/Views/BlogImage/Show.cshtml
+/Views/Shared/Show.en-US.en-US.cshtml
+/Views/Shared/Show.en.en-US.cshtml
+/Views/Shared/Show.en-US.cshtml
+/Views/Shared/Show.en-US.en.cshtml
+/Views/Shared/Show.en.en.cshtml
+/Views/Shared/Show.en.cshtml
+/Views/Shared/Show.en-US.cshtml
+/Views/Shared/Show.en.cshtml
+/Views/Shared/Show.cshtml
+/Pages/Shared/Show.en-US.en-US.cshtml
+/Pages/Shared/Show.en.en-US.cshtml
+/Pages/Shared/Show.en-US.cshtml
+/Pages/Shared/Show.en-US.en.cshtml
+/Pages/Shared/Show.en.en.cshtml
+/Pages/Shared/Show.en.cshtml
+/Pages/Shared/Show.en-US.cshtml
+/Pages/Shared/Show.en.cshtml
+/Pages/Shared/Show.cshtml
+   at Microsoft.AspNetCore.Mvc.ViewEngines.ViewEngineResult.EnsureSuccessful(IEnumerable`1 originalLocations)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at AssociationWebApp.Localization.LocalizationMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\PC\source\repos\Charity\AssociationWebApp\Localization\LocalizationMiddleware.cs:line 21
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2024-07-28T16:09:51.2979792+03:00 0HN5F0PK3PM1C:00000021 [ERR] The view '"Show"' was not found. Searched locations: ["/Views/BlogImage/Show.en-US.en-US.cshtml", "/Views/BlogImage/Show.en.en-US.cshtml", "/Views/BlogImage/Show.en-US.cshtml", "/Views/BlogImage/Show.en-US.en.cshtml", "/Views/BlogImage/Show.en.en.cshtml", "/Views/BlogImage/Show.en.cshtml", "/Views/BlogImage/Show.en-US.cshtml", "/Views/BlogImage/Show.en.cshtml", "/Views/BlogImage/Show.cshtml", "/Views/Shared/Show.en-US.en-US.cshtml", "/Views/Shared/Show.en.en-US.cshtml", "/Views/Shared/Show.en-US.cshtml", "/Views/Shared/Show.en-US.en.cshtml", "/Views/Shared/Show.en.en.cshtml", "/Views/Shared/Show.en.cshtml", "/Views/Shared/Show.en-US.cshtml", "/Views/Shared/Show.en.cshtml", "/Views/Shared/Show.cshtml", "/Pages/Shared/Show.en-US.en-US.cshtml", "/Pages/Shared/Show.en.en-US.cshtml", "/Pages/Shared/Show.en-US.cshtml", "/Pages/Shared/Show.en-US.en.cshtml", "/Pages/Shared/Show.en.en.cshtml", "/Pages/Shared/Show.en.cshtml", "/Pages/Shared/Show.en-US.cshtml", "/Pages/Shared/Show.en.cshtml", "/Pages/Shared/Show.cshtml"] (9bb2756c)
+2024-07-28T16:09:51.3448443+03:00 0HN5F0PK3PM1C:00000021 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.InvalidOperationException: The view 'Show' was not found. The following locations were searched:
+/Views/BlogImage/Show.en-US.en-US.cshtml
+/Views/BlogImage/Show.en.en-US.cshtml
+/Views/BlogImage/Show.en-US.cshtml
+/Views/BlogImage/Show.en-US.en.cshtml
+/Views/BlogImage/Show.en.en.cshtml
+/Views/BlogImage/Show.en.cshtml
+/Views/BlogImage/Show.en-US.cshtml
+/Views/BlogImage/Show.en.cshtml
+/Views/BlogImage/Show.cshtml
+/Views/Shared/Show.en-US.en-US.cshtml
+/Views/Shared/Show.en.en-US.cshtml
+/Views/Shared/Show.en-US.cshtml
+/Views/Shared/Show.en-US.en.cshtml
+/Views/Shared/Show.en.en.cshtml
+/Views/Shared/Show.en.cshtml
+/Views/Shared/Show.en-US.cshtml
+/Views/Shared/Show.en.cshtml
+/Views/Shared/Show.cshtml
+/Pages/Shared/Show.en-US.en-US.cshtml
+/Pages/Shared/Show.en.en-US.cshtml
+/Pages/Shared/Show.en-US.cshtml
+/Pages/Shared/Show.en-US.en.cshtml
+/Pages/Shared/Show.en.en.cshtml
+/Pages/Shared/Show.en.cshtml
+/Pages/Shared/Show.en-US.cshtml
+/Pages/Shared/Show.en.cshtml
+/Pages/Shared/Show.cshtml
+   at Microsoft.AspNetCore.Mvc.ViewEngines.ViewEngineResult.EnsureSuccessful(IEnumerable`1 originalLocations)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at AssociationWebApp.Localization.LocalizationMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\PC\source\repos\Charity\AssociationWebApp\Localization\LocalizationMiddleware.cs:line 21
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2024-07-28T16:12:21.9460520+03:00 0HN5F0RE8D0A4:0000001F [ERR] The view '"./Views/BlogImage/Show.cshtml"' was not found. Searched locations: ["/Views/BlogImage/Show.cshtml"] (9bb2756c)
+2024-07-28T16:12:21.9997999+03:00 0HN5F0RE8D0A4:0000001F [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.InvalidOperationException: The view './Views/BlogImage/Show.cshtml' was not found. The following locations were searched:
+/Views/BlogImage/Show.cshtml
+   at Microsoft.AspNetCore.Mvc.ViewEngines.ViewEngineResult.EnsureSuccessful(IEnumerable`1 originalLocations)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at AssociationWebApp.Localization.LocalizationMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\PC\source\repos\Charity\AssociationWebApp\Localization\LocalizationMiddleware.cs:line 21
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2024-07-28T16:17:23.8198251+03:00 0HN5F0U928GLQ:00000021 [ERR] The view '"~/Areas/Admin/Views/BlogImage/Show"' was not found. Searched locations: ["~/Areas/Admin/Views/BlogImage/Show"] (9bb2756c)
+2024-07-28T16:17:23.8671408+03:00 0HN5F0U928GLQ:00000021 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.InvalidOperationException: The view '~/Areas/Admin/Views/BlogImage/Show' was not found. The following locations were searched:
+~/Areas/Admin/Views/BlogImage/Show
+   at Microsoft.AspNetCore.Mvc.ViewEngines.ViewEngineResult.EnsureSuccessful(IEnumerable`1 originalLocations)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at AssociationWebApp.Localization.LocalizationMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\PC\source\repos\Charity\AssociationWebApp\Localization\LocalizationMiddleware.cs:line 21
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2024-07-28T16:37:05.3376155+03:00 0HN5F1991S43H:00000021 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.InvalidOperationException: Sequence contains no elements
+   at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at AspNetCoreGeneratedDocument.Areas_Admin_Views_Blog_ShowImages.<ExecuteAsync>b__13_0() in C:\Users\PC\source\repos\Charity\AssociationWebApp\Areas\Admin\Views\Blog\ShowImages.cshtml:line 34
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext.GetChildContentAsync(Boolean useCachedResult, HtmlEncoder encoder)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.RenderAtEndOfFormTagHelper.ProcessAsync(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner.<RunAsync>g__Awaited|0_0(Task task, TagHelperExecutionContext executionContext, Int32 i, Int32 count)
+   at AspNetCoreGeneratedDocument.Areas_Admin_Views_Blog_ShowImages.ExecuteAsync() in C:\Users\PC\source\repos\Charity\AssociationWebApp\Areas\Admin\Views\Blog\ShowImages.cshtml:line 3
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at AssociationWebApp.Localization.LocalizationMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\PC\source\repos\Charity\AssociationWebApp\Localization\LocalizationMiddleware.cs:line 21
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2024-07-28T17:58:29.5766375+03:00 0HN5F2MJ1RJC0:0000002B [ERR] The view '"Blog"' was not found. Searched locations: ["/Areas/Admin/Views/Blog/Blog.en-US.en-US.cshtml", "/Areas/Admin/Views/Blog/Blog.en.en-US.cshtml", "/Areas/Admin/Views/Blog/Blog.en-US.cshtml", "/Areas/Admin/Views/Blog/Blog.en-US.en.cshtml", "/Areas/Admin/Views/Blog/Blog.en.en.cshtml", "/Areas/Admin/Views/Blog/Blog.en.cshtml", "/Areas/Admin/Views/Blog/Blog.en-US.cshtml", "/Areas/Admin/Views/Blog/Blog.en.cshtml", "/Areas/Admin/Views/Blog/Blog.cshtml", "/Areas/Admin/Views/Shared/Blog.en-US.en-US.cshtml", "/Areas/Admin/Views/Shared/Blog.en.en-US.cshtml", "/Areas/Admin/Views/Shared/Blog.en-US.cshtml", "/Areas/Admin/Views/Shared/Blog.en-US.en.cshtml", "/Areas/Admin/Views/Shared/Blog.en.en.cshtml", "/Areas/Admin/Views/Shared/Blog.en.cshtml", "/Areas/Admin/Views/Shared/Blog.en-US.cshtml", "/Areas/Admin/Views/Shared/Blog.en.cshtml", "/Areas/Admin/Views/Shared/Blog.cshtml", "/Views/Shared/Blog.en-US.en-US.cshtml", "/Views/Shared/Blog.en.en-US.cshtml", "/Views/Shared/Blog.en-US.cshtml", "/Views/Shared/Blog.en-US.en.cshtml", "/Views/Shared/Blog.en.en.cshtml", "/Views/Shared/Blog.en.cshtml", "/Views/Shared/Blog.en-US.cshtml", "/Views/Shared/Blog.en.cshtml", "/Views/Shared/Blog.cshtml", "/Pages/Shared/Blog.en-US.en-US.cshtml", "/Pages/Shared/Blog.en.en-US.cshtml", "/Pages/Shared/Blog.en-US.cshtml", "/Pages/Shared/Blog.en-US.en.cshtml", "/Pages/Shared/Blog.en.en.cshtml", "/Pages/Shared/Blog.en.cshtml", "/Pages/Shared/Blog.en-US.cshtml", "/Pages/Shared/Blog.en.cshtml", "/Pages/Shared/Blog.cshtml"] (9bb2756c)
+2024-07-28T17:58:29.8281888+03:00 0HN5F2MJ1RJC0:0000002B [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.InvalidOperationException: The view 'Blog' was not found. The following locations were searched:
+/Areas/Admin/Views/Blog/Blog.en-US.en-US.cshtml
+/Areas/Admin/Views/Blog/Blog.en.en-US.cshtml
+/Areas/Admin/Views/Blog/Blog.en-US.cshtml
+/Areas/Admin/Views/Blog/Blog.en-US.en.cshtml
+/Areas/Admin/Views/Blog/Blog.en.en.cshtml
+/Areas/Admin/Views/Blog/Blog.en.cshtml
+/Areas/Admin/Views/Blog/Blog.en-US.cshtml
+/Areas/Admin/Views/Blog/Blog.en.cshtml
+/Areas/Admin/Views/Blog/Blog.cshtml
+/Areas/Admin/Views/Shared/Blog.en-US.en-US.cshtml
+/Areas/Admin/Views/Shared/Blog.en.en-US.cshtml
+/Areas/Admin/Views/Shared/Blog.en-US.cshtml
+/Areas/Admin/Views/Shared/Blog.en-US.en.cshtml
+/Areas/Admin/Views/Shared/Blog.en.en.cshtml
+/Areas/Admin/Views/Shared/Blog.en.cshtml
+/Areas/Admin/Views/Shared/Blog.en-US.cshtml
+/Areas/Admin/Views/Shared/Blog.en.cshtml
+/Areas/Admin/Views/Shared/Blog.cshtml
+/Views/Shared/Blog.en-US.en-US.cshtml
+/Views/Shared/Blog.en.en-US.cshtml
+/Views/Shared/Blog.en-US.cshtml
+/Views/Shared/Blog.en-US.en.cshtml
+/Views/Shared/Blog.en.en.cshtml
+/Views/Shared/Blog.en.cshtml
+/Views/Shared/Blog.en-US.cshtml
+/Views/Shared/Blog.en.cshtml
+/Views/Shared/Blog.cshtml
+/Pages/Shared/Blog.en-US.en-US.cshtml
+/Pages/Shared/Blog.en.en-US.cshtml
+/Pages/Shared/Blog.en-US.cshtml
+/Pages/Shared/Blog.en-US.en.cshtml
+/Pages/Shared/Blog.en.en.cshtml
+/Pages/Shared/Blog.en.cshtml
+/Pages/Shared/Blog.en-US.cshtml
+/Pages/Shared/Blog.en.cshtml
+/Pages/Shared/Blog.cshtml
+   at Microsoft.AspNetCore.Mvc.ViewEngines.ViewEngineResult.EnsureSuccessful(IEnumerable`1 originalLocations)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at AssociationWebApp.Localization.LocalizationMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\PC\source\repos\Charity\AssociationWebApp\Localization\LocalizationMiddleware.cs:line 21
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)

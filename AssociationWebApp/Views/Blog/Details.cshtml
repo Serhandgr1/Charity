@@ -1,0 +1,106 @@
+﻿@model BlogDto
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@Model.Title - Blog Details</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .blog-detail {
+            padding: 50px 0;
+        }
+
+        .blog-thumb img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .blog-info h2 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .blog-category, .blog-tags {
+            font-size: 1.1rem;
+            color: #6c757d;
+        }
+
+        .blog-description {
+            font-size: 1.2rem;
+            line-height: 1.7;
+        }
+
+        .blog-btn {
+            padding: 10px 20px;
+            font-size: 1rem;
+            border-radius: 50px;
+            transition: background-color 0.3s;
+        }
+
+            .blog-btn:hover {
+                background-color: #0056b3;
+                color: #fff;
+            }
+
+        .blog-additional-link {
+            font-size: 1rem;
+            color: #007bff;
+            margin-right: 15px;
+            transition: color 0.3s;
+        }
+
+            .blog-additional-link:hover {
+                color: #0056b3;
+                text-decoration: underline;
+            }
+
+        .donate-btn {
+            background-color: #28a745;
+            color: #fff;
+            border-radius: 50px;
+            transition: background-color 0.3s;
+        }
+
+            .donate-btn:hover {
+                background-color: #218838;
+                text-decoration: none;
+            }
+    </style>
+</head>
+<body>
+    <section class="blog-detail">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="blog-thumb mb-4 mb-lg-0">
+                        <img src="~/@Model.Image" class="img-fluid blog-image" alt="@Model.Title">
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+
+                    <div class="blog-description mt-4">
+                        <strong class="d-block mb-2"></strong>
+                        <p class="lead">@Html.Raw(Model.Content)</p>
+                    </div>
+
+                    <div class="blog-actions mt-5 d-flex justify-content-between flex-column flex-md-row">
+                        <a class="button" asp-controller="Blog" asp-action="Index">
+                            <i class="fa-solid fa-list"></i> Back to Blog List
+                        </a>
+
+                        <a asp-controller="Donate" asp-action="Index" class="button">Donate Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</body>
+</html>

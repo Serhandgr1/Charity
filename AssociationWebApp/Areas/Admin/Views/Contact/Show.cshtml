@@ -1,0 +1,35 @@
+﻿@model IEnumerable<ContactDto>
+
+@{
+    ViewData["Title"] = "Contact List";
+}
+
+<h2>Contact List</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Message</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var contact in Model)
+        {
+            <tr>
+                <td>@contact.Id</td>
+                <td>@contact.Name</td>
+                <td>@contact.Email</td>
+                <td>@contact.Phone</td>
+                <td>@contact.Messagge</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@contact.Id" class="btn btn-info">Details</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,84 @@
+﻿@model IEnumerable<QuestionDto>
+
+<div class="container-fluid">
+    <!-- start page title -->
+    <div class="row">
+        <div class="col-12">
+            <div class="page-title-box">
+                <div class="page-title-right">
+                    <ol class="breadcrumb m-0">
+                        <li class="breadcrumb-item"><a href="javascript: void(0);">Admin</a></li>
+                        <li class="breadcrumb-item"><a href="javascript: void(0);">Questions</a></li>
+                        <li class="breadcrumb-item active">Show Questions</li>
+                    </ol>
+                </div>
+                <h4 class="page-title">Show Questions</h4>
+            </div>
+        </div>
+    </div>
+    <!-- end page title -->
+
+    <div class="row">
+        <div class="col-xl-12">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="header-title">Show Questions</h4>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive-sm">
+                        <table class="table table-striped table-centered mb-0">
+                            <thead>
+                                <tr>
+                                    <th>Question Text</th>
+                                    <th>Answers</th>
+                                    <th style="text-align: right;">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>@item.Text</td> <!-- Question text here -->
+                                        <td>
+                                            <div style="display: inline-block;">
+                                                <!-- View Answers -->
+                                                <form method="get" asp-controller="Answer" asp-action="Show">
+                                                    <input type="hidden" name="questionId" value="@item.Id" />
+                                                    <button type="submit" class="btn btn-link text-reset fs-16 px-1" title="View Answers">
+                                                        <i class="ri-question-answer-line"></i>
+                                                    </button>
+                                                </form>
+                                            </div>
+                                        </td> <!-- Question text here -->
+                                        <td style="text-align: right;">
+                                            
+                                            <div style="display: inline-block;">
+                                                <!-- Edit Question -->
+                                                <form method="get" asp-controller="Question" asp-action="Edit">
+                                                    <input type="hidden" name="Id" value="@item.Id" />
+                                                    <button type="submit" class="btn btn-link text-reset fs-16 px-1">
+                                                        <i class="ri-settings-3-line"></i>
+                                                    </button>
+                                                </form>
+                                            </div>
+                                            <div style="display: inline-block;">
+                                                <!-- Delete Question -->
+                                                <form method="post" asp-controller="Question" asp-action="DeleteQuestion" onsubmit="return confirm('Are you sure you want to delete this question?');">
+                                                    <input type="hidden" name="Id" value="@item.Id" />
+                                                    <button type="submit" class="btn btn-link text-reset fs-16 px-1">
+                                                        <i class="ri-delete-bin-2-line"></i>
+                                                    </button>
+                                                </form>
+
+                                            </div>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div> <!-- end table-responsive-->
+                </div> <!-- end card body-->
+            </div> <!-- end card -->
+        </div><!-- end col-->
+    </div><!-- end row-->
+</div> <!-- container -->

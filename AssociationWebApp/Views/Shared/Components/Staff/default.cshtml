@@ -1,0 +1,44 @@
+﻿@model List<StaffDto>
+@inject IViewLocalizer localizer
+
+<ul class="staff-items large-block-grid-2">
+    @foreach (var staff in Model)
+    {
+        <li class="staff-item">
+            <div class="staff-item-image">
+                <img style="width:285px; height:248px;" src="@staff.Image" alt="@staff.FullName" itemprop="image" />
+            </div><!-- /.staff-item-image -->
+
+            <div class="staff-item-content">
+                <div class="staff-item-content-inner">
+                    <h4 itemprop="name">@staff.FullName</h4>
+
+                    <p style="width:200px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">
+                        @localizer[staff.Content]
+                    </p>
+
+                    <div class="staff-item-actions">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div><!-- /.staff-item-actions -->
+                </div><!-- /.staff-item-content-inner -->
+            </div><!-- /.staff-item-content -->
+        </li>
+        <!-- /.staff-item -->
+    }
+</ul>

@@ -1,0 +1,539 @@
+2024-08-06T10:30:37.2112264+03:00 0HN5LT6ILTTQ4:0000004B [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.ArgumentNullException: Value cannot be null. (Parameter 'entity')
+   at Microsoft.EntityFrameworkCore.Utilities.Check.NotNull[T](T value, String parameterName)
+   at Microsoft.EntityFrameworkCore.DbContext.Entry[TEntity](TEntity entity)
+   at Repositories.EFCore.RepositoryBase`1.GetById(Int32 id) in C:\Users\serka\source\repos\Charity\Repositories\EFCore\RepositoryBase.cs:line 26
+   at Services.EFCore.SettingService.GetSettingById(Int32 id) in C:\Users\serka\source\repos\Charity\Services\EFCore\SettingService.cs:line 43
+   at AssociationWebApp.Areas.Admin.Controllers.SettingController.Edit(Int32 id) in C:\Users\serka\source\repos\Charity\AssociationWebApp\Areas\Admin\Controllers\SettingController.cs:line 23
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at AssociationWebApp.Localization.LocalizationMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\serka\source\repos\Charity\AssociationWebApp\Localization\LocalizationMiddleware.cs:line 21
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2024-08-06T10:42:57.2064918+03:00 0HN5LTDB749BF:00000057 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Task`1 -> SettingDto
+System.Threading.Tasks.Task`1[[Entities.ModelDto.SettingDto, Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> Entities.ModelDto.SettingDto
+   at lambda_method73(Closure , Object , SettingDto , ResolutionContext )
+   at Services.EFCore.SettingService.GetOneSettingForUpdate(Int32 id, Boolean trackChanges) in C:\Users\serka\source\repos\Charity\Services\EFCore\SettingService.cs:line 62
+   at AssociationWebApp.Areas.Admin.Controllers.SettingController.Edit(Int32 id) in C:\Users\serka\source\repos\Charity\AssociationWebApp\Areas\Admin\Controllers\SettingController.cs:line 23
+   at lambda_method69(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at AssociationWebApp.Localization.LocalizationMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\serka\source\repos\Charity\AssociationWebApp\Localization\LocalizationMiddleware.cs:line 21
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2024-08-06T10:50:49.5390389+03:00 0HN5LTHHOQ23G:00000007 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.ArgumentNullException: Value cannot be null. (Parameter 'entity')
+   at Microsoft.EntityFrameworkCore.Utilities.Check.NotNull[T](T value, String parameterName)
+   at Microsoft.EntityFrameworkCore.DbContext.Entry[TEntity](TEntity entity)
+   at Repositories.EFCore.RepositoryBase`1.GetById(Int32 id) in C:\Users\serka\source\repos\Charity\Repositories\EFCore\RepositoryBase.cs:line 26
+   at Services.EFCore.SettingService.GetOneSettingForUpdate(Int32 id, Boolean trackChanges) in C:\Users\serka\source\repos\Charity\Services\EFCore\SettingService.cs:line 65
+   at AssociationWebApp.Areas.Admin.Controllers.SettingController.Edit(Int32 id) in C:\Users\serka\source\repos\Charity\AssociationWebApp\Areas\Admin\Controllers\SettingController.cs:line 24
+   at lambda_method16(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at AssociationWebApp.Localization.LocalizationMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\serka\source\repos\Charity\AssociationWebApp\Localization\LocalizationMiddleware.cs:line 21
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2024-08-06T10:58:42.7811447+03:00 0HN5LTM727EEM:00000007 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+AsyncStateMachineBox`1 -> SettingDto
+System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1[[Entities.ModelDto.SettingDto, Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Services.EFCore.SettingService+<GetSettingById>d__5, Services, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> Entities.ModelDto.SettingDto
+   at lambda_method58(Closure , Object , SettingDto , ResolutionContext )
+   at Services.EFCore.SettingService.GetOneSettingForUpdate(Int32 id, Boolean trackChanges) in C:\Users\serka\source\repos\Charity\Services\EFCore\SettingService.cs:line 66
+   at AssociationWebApp.Areas.Admin.Controllers.SettingController.Edit(Int32 id) in C:\Users\serka\source\repos\Charity\AssociationWebApp\Areas\Admin\Controllers\SettingController.cs:line 26
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at AssociationWebApp.Localization.LocalizationMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\serka\source\repos\Charity\AssociationWebApp\Localization\LocalizationMiddleware.cs:line 21
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2024-08-06T10:58:42.9026289+03:00 0HN5LTM727EEM:00000007 [ERR] An error occurred using the connection to database '"AssociationWebApp"' on server '"DESKTOP-35T25HC\SQLEXPRESS"'. (5fc3407c)
+2024-08-06T10:58:42.9585182+03:00 0HN5LTM727EEM:00000007 [ERR] An exception occurred while iterating over the results of a query for context type '"Repositories.EFCore.RepositoryContext"'."
+""System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()" (f5c7ac34)
+System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2024-08-06T11:16:32.5145648+03:00 0HN5LU04A63IH:00000007 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.Exception: Setting Not Found
+   at Services.EFCore.SettingService.GetOneSetting(Int32 id, Boolean trackChanges) in C:\Users\serka\source\repos\Charity\Services\EFCore\SettingService.cs:line 74
+   at Services.EFCore.SettingService.GetOneSettingForUpdate(Int32 id, Boolean trackChanges) in C:\Users\serka\source\repos\Charity\Services\EFCore\SettingService.cs:line 65
+   at AssociationWebApp.Areas.Admin.Controllers.SettingController.Edit(Int32 id) in C:\Users\serka\source\repos\Charity\AssociationWebApp\Areas\Admin\Controllers\SettingController.cs:line 24
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at AssociationWebApp.Localization.LocalizationMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\serka\source\repos\Charity\AssociationWebApp\Localization\LocalizationMiddleware.cs:line 21
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2024-08-06T15:26:01.7292440+03:00 0HN5M2BJDS9JD:00000007 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at AssociationWebApp.Areas.Admin.Controllers.ContactController.Show() in C:\Users\serka\source\repos\Charity\AssociationWebApp\Areas\Admin\Controllers\ContactController.cs:line 14
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at AssociationWebApp.Localization.LocalizationMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\serka\source\repos\Charity\AssociationWebApp\Localization\LocalizationMiddleware.cs:line 21
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2024-08-06T15:31:05.7603684+03:00 0HN5M2E95JHPF:0000001B [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.ArgumentNullException: Value cannot be null. (Parameter 'entity')
+   at Microsoft.EntityFrameworkCore.Utilities.Check.NotNull[T](T value, String parameterName)
+   at Microsoft.EntityFrameworkCore.DbContext.Entry[TEntity](TEntity entity)
+   at Repositories.EFCore.RepositoryBase`1.GetById(Int32 id) in C:\Users\serka\source\repos\Charity\Repositories\EFCore\RepositoryBase.cs:line 26
+   at Services.EFCore.MemberShipService.GetMemberShipById(Int32 id) in C:\Users\serka\source\repos\Charity\Services\EFCore\MemberShipService.cs:line 44
+   at AssociationWebApp.Areas.Admin.Controllers.MemberShipController.Update(Int32 id) in C:\Users\serka\source\repos\Charity\AssociationWebApp\Areas\Admin\Controllers\MemberShipController.cs:line 26
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at AssociationWebApp.Localization.LocalizationMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\serka\source\repos\Charity\AssociationWebApp\Localization\LocalizationMiddleware.cs:line 21
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2024-08-06T15:32:20.4839584+03:00 0HN5M2F36PC0J:0000000F [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.ArgumentNullException: Value cannot be null. (Parameter 'entity')
+   at Microsoft.EntityFrameworkCore.Utilities.Check.NotNull[T](T value, String parameterName)
+   at Microsoft.EntityFrameworkCore.DbContext.Entry[TEntity](TEntity entity)
+   at Repositories.EFCore.RepositoryBase`1.GetById(Int32 id) in C:\Users\serka\source\repos\Charity\Repositories\EFCore\RepositoryBase.cs:line 26
+   at Services.EFCore.MemberShipService.GetMemberShipById(Int32 id) in C:\Users\serka\source\repos\Charity\Services\EFCore\MemberShipService.cs:line 44
+   at AssociationWebApp.Areas.Admin.Controllers.MemberShipController.Update(Int32 id) in C:\Users\serka\source\repos\Charity\AssociationWebApp\Areas\Admin\Controllers\MemberShipController.cs:line 26
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at AssociationWebApp.Localization.LocalizationMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\serka\source\repos\Charity\AssociationWebApp\Localization\LocalizationMiddleware.cs:line 21
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2024-08-06T15:39:28.9777633+03:00 0HN5M2J3BPIFV:0000000F [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.ArgumentNullException: Value cannot be null. (Parameter 'entity')
+   at Microsoft.EntityFrameworkCore.Utilities.Check.NotNull[T](T value, String parameterName)
+   at Microsoft.EntityFrameworkCore.DbContext.Entry[TEntity](TEntity entity)
+   at Repositories.EFCore.RepositoryBase`1.GetById(Int32 id) in C:\Users\serka\source\repos\Charity\Repositories\EFCore\RepositoryBase.cs:line 26
+   at Services.EFCore.MemberShipService.GetMemberShipById(Int32 id) in C:\Users\serka\source\repos\Charity\Services\EFCore\MemberShipService.cs:line 44
+   at AssociationWebApp.Areas.Admin.Controllers.MemberShipController.Update(Int32 id) in C:\Users\serka\source\repos\Charity\AssociationWebApp\Areas\Admin\Controllers\MemberShipController.cs:line 26
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at AssociationWebApp.Localization.LocalizationMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\serka\source\repos\Charity\AssociationWebApp\Localization\LocalizationMiddleware.cs:line 21
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2024-08-06T15:40:19.9721613+03:00 0HN5M2J3BPIFV:0000001F [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.AggregateException: One or more errors occurred. (Value cannot be null. (Parameter 'entity'))
+ ---> System.ArgumentNullException: Value cannot be null. (Parameter 'entity')
+   at Microsoft.EntityFrameworkCore.Utilities.Check.NotNull[T](T value, String parameterName)
+   at Microsoft.EntityFrameworkCore.DbContext.Entry[TEntity](TEntity entity)
+   at Repositories.EFCore.RepositoryBase`1.GetById(Int32 id) in C:\Users\serka\source\repos\Charity\Repositories\EFCore\RepositoryBase.cs:line 26
+   at Services.EFCore.BlogService.GetBlogById(Int32 id) in C:\Users\serka\source\repos\Charity\Services\EFCore\BlogService.cs:line 44
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at System.Threading.Tasks.Task`1.get_Result()
+   at AssociationWebApp.Areas.Admin.Controllers.BlogController.Update(Int32 id) in C:\Users\serka\source\repos\Charity\AssociationWebApp\Areas\Admin\Controllers\BlogController.cs:line 101
+   at lambda_method88(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at AssociationWebApp.Localization.LocalizationMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\serka\source\repos\Charity\AssociationWebApp\Localization\LocalizationMiddleware.cs:line 21
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2024-08-06T15:41:22.2320043+03:00 0HN5M2J3BPIFV:00000027 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.AggregateException: One or more errors occurred. (Value cannot be null. (Parameter 'entity'))
+ ---> System.ArgumentNullException: Value cannot be null. (Parameter 'entity')
+   at Microsoft.EntityFrameworkCore.Utilities.Check.NotNull[T](T value, String parameterName)
+   at Microsoft.EntityFrameworkCore.DbContext.Entry[TEntity](TEntity entity)
+   at Repositories.EFCore.RepositoryBase`1.GetById(Int32 id) in C:\Users\serka\source\repos\Charity\Repositories\EFCore\RepositoryBase.cs:line 26
+   at Services.EFCore.BlogService.GetBlogById(Int32 id) in C:\Users\serka\source\repos\Charity\Services\EFCore\BlogService.cs:line 44
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at System.Threading.Tasks.Task`1.get_Result()
+   at AssociationWebApp.Areas.Admin.Controllers.BlogController.Update(Int32 id) in C:\Users\serka\source\repos\Charity\AssociationWebApp\Areas\Admin\Controllers\BlogController.cs:line 101
+   at lambda_method88(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at AssociationWebApp.Localization.LocalizationMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\serka\source\repos\Charity\AssociationWebApp\Localization\LocalizationMiddleware.cs:line 21
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2024-08-06T15:42:40.5312031+03:00 0HN5M2KRU1BTV:00000017 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.ArgumentNullException: Value cannot be null. (Parameter 'entity')
+   at Microsoft.EntityFrameworkCore.Utilities.Check.NotNull[T](T value, String parameterName)
+   at Microsoft.EntityFrameworkCore.DbContext.Entry[TEntity](TEntity entity)
+   at Repositories.EFCore.RepositoryBase`1.GetById(Int32 id) in C:\Users\serka\source\repos\Charity\Repositories\EFCore\RepositoryBase.cs:line 26
+   at Services.EFCore.MemberShipService.GetMemberShipById(Int32 id) in C:\Users\serka\source\repos\Charity\Services\EFCore\MemberShipService.cs:line 44
+   at AssociationWebApp.Areas.Admin.Controllers.MemberShipController.Update(Int32 id) in C:\Users\serka\source\repos\Charity\AssociationWebApp\Areas\Admin\Controllers\MemberShipController.cs:line 26
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at AssociationWebApp.Localization.LocalizationMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\serka\source\repos\Charity\AssociationWebApp\Localization\LocalizationMiddleware.cs:line 21
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2024-08-06T15:53:32.6949480+03:00 0HN5M2QB7HL86:00000033 [ERR] The view '"Details"' was not found. Searched locations: ["/Areas/Admin/Views/Contact/Details.kr-KR.kr-KR.cshtml", "/Areas/Admin/Views/Contact/Details.kr.kr-KR.cshtml", "/Areas/Admin/Views/Contact/Details.kr-KR.cshtml", "/Areas/Admin/Views/Contact/Details.kr-KR.kr.cshtml", "/Areas/Admin/Views/Contact/Details.kr.kr.cshtml", "/Areas/Admin/Views/Contact/Details.kr.cshtml", "/Areas/Admin/Views/Contact/Details.kr-KR.cshtml", "/Areas/Admin/Views/Contact/Details.kr.cshtml", "/Areas/Admin/Views/Contact/Details.cshtml", "/Areas/Admin/Views/Shared/Details.kr-KR.kr-KR.cshtml", "/Areas/Admin/Views/Shared/Details.kr.kr-KR.cshtml", "/Areas/Admin/Views/Shared/Details.kr-KR.cshtml", "/Areas/Admin/Views/Shared/Details.kr-KR.kr.cshtml", "/Areas/Admin/Views/Shared/Details.kr.kr.cshtml", "/Areas/Admin/Views/Shared/Details.kr.cshtml", "/Areas/Admin/Views/Shared/Details.kr-KR.cshtml", "/Areas/Admin/Views/Shared/Details.kr.cshtml", "/Areas/Admin/Views/Shared/Details.cshtml", "/Views/Shared/Details.kr-KR.kr-KR.cshtml", "/Views/Shared/Details.kr.kr-KR.cshtml", "/Views/Shared/Details.kr-KR.cshtml", "/Views/Shared/Details.kr-KR.kr.cshtml", "/Views/Shared/Details.kr.kr.cshtml", "/Views/Shared/Details.kr.cshtml", "/Views/Shared/Details.kr-KR.cshtml", "/Views/Shared/Details.kr.cshtml", "/Views/Shared/Details.cshtml", "/Pages/Shared/Details.kr-KR.kr-KR.cshtml", "/Pages/Shared/Details.kr.kr-KR.cshtml", "/Pages/Shared/Details.kr-KR.cshtml", "/Pages/Shared/Details.kr-KR.kr.cshtml", "/Pages/Shared/Details.kr.kr.cshtml", "/Pages/Shared/Details.kr.cshtml", "/Pages/Shared/Details.kr-KR.cshtml", "/Pages/Shared/Details.kr.cshtml", "/Pages/Shared/Details.cshtml"] (9bb2756c)
+2024-08-06T15:53:32.7503654+03:00 0HN5M2QB7HL86:00000033 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.InvalidOperationException: The view 'Details' was not found. The following locations were searched:
+/Areas/Admin/Views/Contact/Details.kr-KR.kr-KR.cshtml
+/Areas/Admin/Views/Contact/Details.kr.kr-KR.cshtml
+/Areas/Admin/Views/Contact/Details.kr-KR.cshtml
+/Areas/Admin/Views/Contact/Details.kr-KR.kr.cshtml
+/Areas/Admin/Views/Contact/Details.kr.kr.cshtml
+/Areas/Admin/Views/Contact/Details.kr.cshtml
+/Areas/Admin/Views/Contact/Details.kr-KR.cshtml
+/Areas/Admin/Views/Contact/Details.kr.cshtml
+/Areas/Admin/Views/Contact/Details.cshtml
+/Areas/Admin/Views/Shared/Details.kr-KR.kr-KR.cshtml
+/Areas/Admin/Views/Shared/Details.kr.kr-KR.cshtml
+/Areas/Admin/Views/Shared/Details.kr-KR.cshtml
+/Areas/Admin/Views/Shared/Details.kr-KR.kr.cshtml
+/Areas/Admin/Views/Shared/Details.kr.kr.cshtml
+/Areas/Admin/Views/Shared/Details.kr.cshtml
+/Areas/Admin/Views/Shared/Details.kr-KR.cshtml
+/Areas/Admin/Views/Shared/Details.kr.cshtml
+/Areas/Admin/Views/Shared/Details.cshtml
+/Views/Shared/Details.kr-KR.kr-KR.cshtml
+/Views/Shared/Details.kr.kr-KR.cshtml
+/Views/Shared/Details.kr-KR.cshtml
+/Views/Shared/Details.kr-KR.kr.cshtml
+/Views/Shared/Details.kr.kr.cshtml
+/Views/Shared/Details.kr.cshtml
+/Views/Shared/Details.kr-KR.cshtml
+/Views/Shared/Details.kr.cshtml
+/Views/Shared/Details.cshtml
+/Pages/Shared/Details.kr-KR.kr-KR.cshtml
+/Pages/Shared/Details.kr.kr-KR.cshtml
+/Pages/Shared/Details.kr-KR.cshtml
+/Pages/Shared/Details.kr-KR.kr.cshtml
+/Pages/Shared/Details.kr.kr.cshtml
+/Pages/Shared/Details.kr.cshtml
+/Pages/Shared/Details.kr-KR.cshtml
+/Pages/Shared/Details.kr.cshtml
+/Pages/Shared/Details.cshtml
+   at Microsoft.AspNetCore.Mvc.ViewEngines.ViewEngineResult.EnsureSuccessful(IEnumerable`1 originalLocations)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at AssociationWebApp.Localization.LocalizationMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\serka\source\repos\Charity\AssociationWebApp\Localization\LocalizationMiddleware.cs:line 21
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2024-08-06T15:53:37.4964064+03:00 0HN5M2QB7HL86:00000039 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.ArgumentNullException: Value cannot be null. (Parameter 'entity')
+   at Microsoft.EntityFrameworkCore.Utilities.Check.NotNull[T](T value, String parameterName)
+   at Microsoft.EntityFrameworkCore.DbContext.Entry[TEntity](TEntity entity)
+   at Repositories.EFCore.RepositoryBase`1.GetById(Int32 id) in C:\Users\serka\source\repos\Charity\Repositories\EFCore\RepositoryBase.cs:line 26
+   at Services.EFCore.ContactService.GetContactById(Int32 id) in C:\Users\serka\source\repos\Charity\Services\EFCore\ContactService.cs:line 43
+   at AssociationWebApp.Areas.Admin.Controllers.ContactController.Details(Int32 id) in C:\Users\serka\source\repos\Charity\AssociationWebApp\Areas\Admin\Controllers\ContactController.cs:line 25
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at AssociationWebApp.Localization.LocalizationMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\serka\source\repos\Charity\AssociationWebApp\Localization\LocalizationMiddleware.cs:line 21
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2024-08-06T16:10:02.3896057+03:00 0HN5M33UFRBAP:00000031 [ERR] The view '"Add"' was not found. Searched locations: ["/Areas/Admin/Views/Staff/Add.kr-KR.kr-KR.cshtml", "/Areas/Admin/Views/Staff/Add.kr.kr-KR.cshtml", "/Areas/Admin/Views/Staff/Add.kr-KR.cshtml", "/Areas/Admin/Views/Staff/Add.kr-KR.kr.cshtml", "/Areas/Admin/Views/Staff/Add.kr.kr.cshtml", "/Areas/Admin/Views/Staff/Add.kr.cshtml", "/Areas/Admin/Views/Staff/Add.kr-KR.cshtml", "/Areas/Admin/Views/Staff/Add.kr.cshtml", "/Areas/Admin/Views/Staff/Add.cshtml", "/Areas/Admin/Views/Shared/Add.kr-KR.kr-KR.cshtml", "/Areas/Admin/Views/Shared/Add.kr.kr-KR.cshtml", "/Areas/Admin/Views/Shared/Add.kr-KR.cshtml", "/Areas/Admin/Views/Shared/Add.kr-KR.kr.cshtml", "/Areas/Admin/Views/Shared/Add.kr.kr.cshtml", "/Areas/Admin/Views/Shared/Add.kr.cshtml", "/Areas/Admin/Views/Shared/Add.kr-KR.cshtml", "/Areas/Admin/Views/Shared/Add.kr.cshtml", "/Areas/Admin/Views/Shared/Add.cshtml", "/Views/Shared/Add.kr-KR.kr-KR.cshtml", "/Views/Shared/Add.kr.kr-KR.cshtml", "/Views/Shared/Add.kr-KR.cshtml", "/Views/Shared/Add.kr-KR.kr.cshtml", "/Views/Shared/Add.kr.kr.cshtml", "/Views/Shared/Add.kr.cshtml", "/Views/Shared/Add.kr-KR.cshtml", "/Views/Shared/Add.kr.cshtml", "/Views/Shared/Add.cshtml", "/Pages/Shared/Add.kr-KR.kr-KR.cshtml", "/Pages/Shared/Add.kr.kr-KR.cshtml", "/Pages/Shared/Add.kr-KR.cshtml", "/Pages/Shared/Add.kr-KR.kr.cshtml", "/Pages/Shared/Add.kr.kr.cshtml", "/Pages/Shared/Add.kr.cshtml", "/Pages/Shared/Add.kr-KR.cshtml", "/Pages/Shared/Add.kr.cshtml", "/Pages/Shared/Add.cshtml"] (9bb2756c)
+2024-08-06T16:10:02.4261007+03:00 0HN5M33UFRBAP:00000031 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.InvalidOperationException: The view 'Add' was not found. The following locations were searched:
+/Areas/Admin/Views/Staff/Add.kr-KR.kr-KR.cshtml
+/Areas/Admin/Views/Staff/Add.kr.kr-KR.cshtml
+/Areas/Admin/Views/Staff/Add.kr-KR.cshtml
+/Areas/Admin/Views/Staff/Add.kr-KR.kr.cshtml
+/Areas/Admin/Views/Staff/Add.kr.kr.cshtml
+/Areas/Admin/Views/Staff/Add.kr.cshtml
+/Areas/Admin/Views/Staff/Add.kr-KR.cshtml
+/Areas/Admin/Views/Staff/Add.kr.cshtml
+/Areas/Admin/Views/Staff/Add.cshtml
+/Areas/Admin/Views/Shared/Add.kr-KR.kr-KR.cshtml
+/Areas/Admin/Views/Shared/Add.kr.kr-KR.cshtml
+/Areas/Admin/Views/Shared/Add.kr-KR.cshtml
+/Areas/Admin/Views/Shared/Add.kr-KR.kr.cshtml
+/Areas/Admin/Views/Shared/Add.kr.kr.cshtml
+/Areas/Admin/Views/Shared/Add.kr.cshtml
+/Areas/Admin/Views/Shared/Add.kr-KR.cshtml
+/Areas/Admin/Views/Shared/Add.kr.cshtml
+/Areas/Admin/Views/Shared/Add.cshtml
+/Views/Shared/Add.kr-KR.kr-KR.cshtml
+/Views/Shared/Add.kr.kr-KR.cshtml
+/Views/Shared/Add.kr-KR.cshtml
+/Views/Shared/Add.kr-KR.kr.cshtml
+/Views/Shared/Add.kr.kr.cshtml
+/Views/Shared/Add.kr.cshtml
+/Views/Shared/Add.kr-KR.cshtml
+/Views/Shared/Add.kr.cshtml
+/Views/Shared/Add.cshtml
+/Pages/Shared/Add.kr-KR.kr-KR.cshtml
+/Pages/Shared/Add.kr.kr-KR.cshtml
+/Pages/Shared/Add.kr-KR.cshtml
+/Pages/Shared/Add.kr-KR.kr.cshtml
+/Pages/Shared/Add.kr.kr.cshtml
+/Pages/Shared/Add.kr.cshtml
+/Pages/Shared/Add.kr-KR.cshtml
+/Pages/Shared/Add.kr.cshtml
+/Pages/Shared/Add.cshtml
+   at Microsoft.AspNetCore.Mvc.ViewEngines.ViewEngineResult.EnsureSuccessful(IEnumerable`1 originalLocations)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at AssociationWebApp.Localization.LocalizationMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\serka\source\repos\Charity\AssociationWebApp\Localization\LocalizationMiddleware.cs:line 21
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)

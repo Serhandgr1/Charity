@@ -1,0 +1,27 @@
+﻿@model BlogDto
+@inject IViewLocalizer localizer
+<li class="slide">
+    <div class="slide-image">
+        @*<img src="@Model.Image" height="178" width="269" alt="@Model.Title">*@
+        <img style="width:269px; height:178px;" src="@Model.Image" />
+
+        <div class="slide-bar">
+            <span>
+                <i class="far fa-folder-open"></i> @Model.BlogCategory
+            </span>
+
+            <span>
+                <i class="far fa-calendar-alt"></i> @DateTime.Now.ToString("MMMM dd, yyyy")
+            </span>
+        </div><!-- /.slide-bar -->
+    </div><!-- /.slide-image -->
+
+    <div class="slide-content">
+        <h4>
+            <a href="@Url.Action("GetBlogById", "Blog", new { id = Model.Id })">@localizer[@Model.Title]</a>
+        </h4>
+
+        <p>@localizer[Model.Content]</p>
+
+    </div><!-- /.slide-content -->
+</li><!-- /.slide -->

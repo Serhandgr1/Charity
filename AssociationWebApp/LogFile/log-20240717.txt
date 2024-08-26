@@ -1,0 +1,313 @@
+2024-07-17T09:59:10.0606855+03:00  [FTL] Application startup exception (6c57a5ba)
+System.InvalidOperationException: Scheme already exists: Identity.Application
+   at Microsoft.AspNetCore.Authentication.AuthenticationOptions.AddScheme(String name, Action`1 configureBuilder)
+   at Microsoft.AspNetCore.Authentication.AuthenticationBuilder.<>c__DisplayClass4_0`2.<AddSchemeHelper>b__0(AuthenticationOptions o)
+   at Microsoft.Extensions.Options.ConfigureNamedOptions`1.Configure(String name, TOptions options)
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at Microsoft.Extensions.Options.UnnamedOptionsManager`1.get_Value()
+   at Microsoft.AspNetCore.Authentication.AuthenticationSchemeProvider..ctor(IOptions`1 options, IDictionary`2 schemes)
+   at Microsoft.AspNetCore.Authentication.AuthenticationSchemeProvider..ctor(IOptions`1 options)
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Span`1& arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeConstructorInfo.Invoke(BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.CreateServiceAccessor(Type serviceType)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.ConstructorMatcher.CreateInstance(IServiceProvider provider)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass5_0.<UseMiddleware>b__0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.<ConfigureApplication>b__27_0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+2024-07-17T15:31:20.9594033+03:00 0HN56BH7QKVTT:0000000F [ERR] The view '"Index"' was not found. Searched locations: ["/Views/User/Index.en-US.en-US.cshtml", "/Views/User/Index.en.en-US.cshtml", "/Views/User/Index.en-US.cshtml", "/Views/User/Index.en-US.en.cshtml", "/Views/User/Index.en.en.cshtml", "/Views/User/Index.en.cshtml", "/Views/User/Index.en-US.cshtml", "/Views/User/Index.en.cshtml", "/Views/User/Index.cshtml", "/Views/Shared/Index.en-US.en-US.cshtml", "/Views/Shared/Index.en.en-US.cshtml", "/Views/Shared/Index.en-US.cshtml", "/Views/Shared/Index.en-US.en.cshtml", "/Views/Shared/Index.en.en.cshtml", "/Views/Shared/Index.en.cshtml", "/Views/Shared/Index.en-US.cshtml", "/Views/Shared/Index.en.cshtml", "/Views/Shared/Index.cshtml", "/Pages/Shared/Index.en-US.en-US.cshtml", "/Pages/Shared/Index.en.en-US.cshtml", "/Pages/Shared/Index.en-US.cshtml", "/Pages/Shared/Index.en-US.en.cshtml", "/Pages/Shared/Index.en.en.cshtml", "/Pages/Shared/Index.en.cshtml", "/Pages/Shared/Index.en-US.cshtml", "/Pages/Shared/Index.en.cshtml", "/Pages/Shared/Index.cshtml"] (9bb2756c)
+2024-07-17T15:31:20.9974603+03:00 0HN56BH7QKVTT:0000000F [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.InvalidOperationException: The view 'Index' was not found. The following locations were searched:
+/Views/User/Index.en-US.en-US.cshtml
+/Views/User/Index.en.en-US.cshtml
+/Views/User/Index.en-US.cshtml
+/Views/User/Index.en-US.en.cshtml
+/Views/User/Index.en.en.cshtml
+/Views/User/Index.en.cshtml
+/Views/User/Index.en-US.cshtml
+/Views/User/Index.en.cshtml
+/Views/User/Index.cshtml
+/Views/Shared/Index.en-US.en-US.cshtml
+/Views/Shared/Index.en.en-US.cshtml
+/Views/Shared/Index.en-US.cshtml
+/Views/Shared/Index.en-US.en.cshtml
+/Views/Shared/Index.en.en.cshtml
+/Views/Shared/Index.en.cshtml
+/Views/Shared/Index.en-US.cshtml
+/Views/Shared/Index.en.cshtml
+/Views/Shared/Index.cshtml
+/Pages/Shared/Index.en-US.en-US.cshtml
+/Pages/Shared/Index.en.en-US.cshtml
+/Pages/Shared/Index.en-US.cshtml
+/Pages/Shared/Index.en-US.en.cshtml
+/Pages/Shared/Index.en.en.cshtml
+/Pages/Shared/Index.en.cshtml
+/Pages/Shared/Index.en-US.cshtml
+/Pages/Shared/Index.en.cshtml
+/Pages/Shared/Index.cshtml
+   at Microsoft.AspNetCore.Mvc.ViewEngines.ViewEngineResult.EnsureSuccessful(IEnumerable`1 originalLocations)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at AssociationWebApp.Localization.LocalizationMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\PC\source\repos\Charity\AssociationWebApp\Localization\LocalizationMiddleware.cs:line 21
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2024-07-17T16:05:52.2715031+03:00 0HN56C2AU1CV1:00000017 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.InvalidOperationException: The AuthorizationPolicy named: 'Admin' was not found.
+   at Microsoft.AspNetCore.Authorization.AuthorizationPolicy.CombineAsync(IAuthorizationPolicyProvider policyProvider, IEnumerable`1 authorizeData)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at AssociationWebApp.Localization.LocalizationMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\PC\source\repos\Charity\AssociationWebApp\Localization\LocalizationMiddleware.cs:line 21
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2024-07-17T16:14:11.0805476+03:00 0HN56C8V8UOE9:0000000D [ERR] The view '"Login"' was not found. Searched locations: ["/Views/User/Login.en-US.en-US.cshtml", "/Views/User/Login.en.en-US.cshtml", "/Views/User/Login.en-US.cshtml", "/Views/User/Login.en-US.en.cshtml", "/Views/User/Login.en.en.cshtml", "/Views/User/Login.en.cshtml", "/Views/User/Login.en-US.cshtml", "/Views/User/Login.en.cshtml", "/Views/User/Login.cshtml", "/Views/Shared/Login.en-US.en-US.cshtml", "/Views/Shared/Login.en.en-US.cshtml", "/Views/Shared/Login.en-US.cshtml", "/Views/Shared/Login.en-US.en.cshtml", "/Views/Shared/Login.en.en.cshtml", "/Views/Shared/Login.en.cshtml", "/Views/Shared/Login.en-US.cshtml", "/Views/Shared/Login.en.cshtml", "/Views/Shared/Login.cshtml", "/Pages/Shared/Login.en-US.en-US.cshtml", "/Pages/Shared/Login.en.en-US.cshtml", "/Pages/Shared/Login.en-US.cshtml", "/Pages/Shared/Login.en-US.en.cshtml", "/Pages/Shared/Login.en.en.cshtml", "/Pages/Shared/Login.en.cshtml", "/Pages/Shared/Login.en-US.cshtml", "/Pages/Shared/Login.en.cshtml", "/Pages/Shared/Login.cshtml"] (9bb2756c)
+2024-07-17T16:14:11.1883955+03:00 0HN56C8V8UOE9:0000000D [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.InvalidOperationException: The view 'Login' was not found. The following locations were searched:
+/Views/User/Login.en-US.en-US.cshtml
+/Views/User/Login.en.en-US.cshtml
+/Views/User/Login.en-US.cshtml
+/Views/User/Login.en-US.en.cshtml
+/Views/User/Login.en.en.cshtml
+/Views/User/Login.en.cshtml
+/Views/User/Login.en-US.cshtml
+/Views/User/Login.en.cshtml
+/Views/User/Login.cshtml
+/Views/Shared/Login.en-US.en-US.cshtml
+/Views/Shared/Login.en.en-US.cshtml
+/Views/Shared/Login.en-US.cshtml
+/Views/Shared/Login.en-US.en.cshtml
+/Views/Shared/Login.en.en.cshtml
+/Views/Shared/Login.en.cshtml
+/Views/Shared/Login.en-US.cshtml
+/Views/Shared/Login.en.cshtml
+/Views/Shared/Login.cshtml
+/Pages/Shared/Login.en-US.en-US.cshtml
+/Pages/Shared/Login.en.en-US.cshtml
+/Pages/Shared/Login.en-US.cshtml
+/Pages/Shared/Login.en-US.en.cshtml
+/Pages/Shared/Login.en.en.cshtml
+/Pages/Shared/Login.en.cshtml
+/Pages/Shared/Login.en-US.cshtml
+/Pages/Shared/Login.en.cshtml
+/Pages/Shared/Login.cshtml
+   at Microsoft.AspNetCore.Mvc.ViewEngines.ViewEngineResult.EnsureSuccessful(IEnumerable`1 originalLocations)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at AssociationWebApp.Localization.LocalizationMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\PC\source\repos\Charity\AssociationWebApp\Localization\LocalizationMiddleware.cs:line 21
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2024-07-17T16:14:58.7827504+03:00 0HN56C8V8UOE9:00000013 [ERR] The view '"Login"' was not found. Searched locations: ["/Views/User/Login.en-US.en-US.cshtml", "/Views/User/Login.en.en-US.cshtml", "/Views/User/Login.en-US.cshtml", "/Views/User/Login.en-US.en.cshtml", "/Views/User/Login.en.en.cshtml", "/Views/User/Login.en.cshtml", "/Views/User/Login.en-US.cshtml", "/Views/User/Login.en.cshtml", "/Views/User/Login.cshtml", "/Views/Shared/Login.en-US.en-US.cshtml", "/Views/Shared/Login.en.en-US.cshtml", "/Views/Shared/Login.en-US.cshtml", "/Views/Shared/Login.en-US.en.cshtml", "/Views/Shared/Login.en.en.cshtml", "/Views/Shared/Login.en.cshtml", "/Views/Shared/Login.en-US.cshtml", "/Views/Shared/Login.en.cshtml", "/Views/Shared/Login.cshtml", "/Pages/Shared/Login.en-US.en-US.cshtml", "/Pages/Shared/Login.en.en-US.cshtml", "/Pages/Shared/Login.en-US.cshtml", "/Pages/Shared/Login.en-US.en.cshtml", "/Pages/Shared/Login.en.en.cshtml", "/Pages/Shared/Login.en.cshtml", "/Pages/Shared/Login.en-US.cshtml", "/Pages/Shared/Login.en.cshtml", "/Pages/Shared/Login.cshtml"] (9bb2756c)
+2024-07-17T16:14:58.8231370+03:00 0HN56C8V8UOE9:00000013 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.InvalidOperationException: The view 'Login' was not found. The following locations were searched:
+/Views/User/Login.en-US.en-US.cshtml
+/Views/User/Login.en.en-US.cshtml
+/Views/User/Login.en-US.cshtml
+/Views/User/Login.en-US.en.cshtml
+/Views/User/Login.en.en.cshtml
+/Views/User/Login.en.cshtml
+/Views/User/Login.en-US.cshtml
+/Views/User/Login.en.cshtml
+/Views/User/Login.cshtml
+/Views/Shared/Login.en-US.en-US.cshtml
+/Views/Shared/Login.en.en-US.cshtml
+/Views/Shared/Login.en-US.cshtml
+/Views/Shared/Login.en-US.en.cshtml
+/Views/Shared/Login.en.en.cshtml
+/Views/Shared/Login.en.cshtml
+/Views/Shared/Login.en-US.cshtml
+/Views/Shared/Login.en.cshtml
+/Views/Shared/Login.cshtml
+/Pages/Shared/Login.en-US.en-US.cshtml
+/Pages/Shared/Login.en.en-US.cshtml
+/Pages/Shared/Login.en-US.cshtml
+/Pages/Shared/Login.en-US.en.cshtml
+/Pages/Shared/Login.en.en.cshtml
+/Pages/Shared/Login.en.cshtml
+/Pages/Shared/Login.en-US.cshtml
+/Pages/Shared/Login.en.cshtml
+/Pages/Shared/Login.cshtml
+   at Microsoft.AspNetCore.Mvc.ViewEngines.ViewEngineResult.EnsureSuccessful(IEnumerable`1 originalLocations)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at AssociationWebApp.Localization.LocalizationMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\PC\source\repos\Charity\AssociationWebApp\Localization\LocalizationMiddleware.cs:line 21
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2024-07-17T16:32:07.9172752+03:00 0HN56CIP0VTMC:0000001F [ERR] Failed executing DbCommand ("21"ms) [Parameters=["@p0='?' (DbType = Int32), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (Size = 4000), @p4='?' (DbType = Boolean), @p5='?' (DbType = Boolean), @p6='?' (DbType = Int32), @p7='?' (DbType = DateTime2), @p8='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [BlogCategories] ([CreatedBy], [CreatedDateTime], [DeletedDateTime], [IPAddress], [IsActive], [IsDeleted], [LastModifiedBy], [LastModifiedDateTime], [Title])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8);
+SELECT [Id]
+FROM [BlogCategories]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();" (627a98df)
+2024-07-17T16:32:07.9794708+03:00 0HN56CIP0VTMC:0000001F [ERR] An exception occurred in the database while saving changes for context type '"Repositories.EFCore.RepositoryContext"'."
+""Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'IPAddress', table 'AssociationWebApp.dbo.BlogCategories'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+ClientConnectionId:9205f794-0243-4a24-926b-2a584377030a
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)" (170f029e)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'IPAddress', table 'AssociationWebApp.dbo.BlogCategories'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+ClientConnectionId:9205f794-0243-4a24-926b-2a584377030a
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Repositories.EFCore.RepositoryManager.Save() in C:\Users\PC\source\repos\Charity\Repositories\EFCore\RepositoryManager.cs:line 62
+2024-07-17T16:37:03.6862793+03:00 0HN56CLKOLMIQ:0000001F [ERR] Failed executing DbCommand ("11"ms) [Parameters=["@p0='?' (DbType = Int32), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (Size = 4000), @p4='?' (DbType = Boolean), @p5='?' (DbType = Boolean), @p6='?' (DbType = Int32), @p7='?' (DbType = DateTime2), @p8='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [BlogCategories] ([CreatedBy], [CreatedDateTime], [DeletedDateTime], [IPAddress], [IsActive], [IsDeleted], [LastModifiedBy], [LastModifiedDateTime], [Title])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8);
+SELECT [Id]
+FROM [BlogCategories]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();" (627a98df)
+2024-07-17T16:37:03.7556720+03:00 0HN56CLKOLMIQ:0000001F [ERR] An exception occurred in the database while saving changes for context type '"Repositories.EFCore.RepositoryContext"'."
+""Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'IPAddress', table 'AssociationWebApp.dbo.BlogCategories'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+ClientConnectionId:efede2e3-aaed-485f-ad0c-e56ba867ec02
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)" (170f029e)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'IPAddress', table 'AssociationWebApp.dbo.BlogCategories'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+ClientConnectionId:efede2e3-aaed-485f-ad0c-e56ba867ec02
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Repositories.EFCore.RepositoryManager.Save() in C:\Users\PC\source\repos\Charity\Repositories\EFCore\RepositoryManager.cs:line 62
+   at Services.EFCore.BlogCategoryService.CreateBlogCategory(BlogCategoryDto blogCategoryDto) in C:\Users\PC\source\repos\Charity\Services\EFCore\BlogCategoryService.cs:line 29

@@ -1,0 +1,29 @@
+﻿@model List<BlogDto>
+@inject IViewLocalizer localizer
+<div class="section-foot">
+    <h4 class="section-foot-title">
+        <span>@localizer["Latest news"]</span>
+    </h4><!-- /.section-foot-title -->
+
+    <ul class="latest-news-items">
+        @foreach (var blog in Model)
+        {
+            <li class="latest-news-item">
+                <div class="latest-news-item-image">
+                    <a href="@Url.Action("Details", "Blog", new { id = blog.Id })">
+                        @*<img src="@blog.Image" height="66" width="80" alt="@blog.Title" />*@
+                        <img style="width:80px; height:66px;" src="@blog.Image"/>
+                    </a>
+                </div><!-- /.latest-news-item-image -->
+
+                <div class="latest-news-item-content">
+                    <h4>
+                        <a href="@Url.Action("Details", "Blog", new { id = blog.Id })">@localizer[@blog.Title]</a>
+                    </h4>
+
+                    <p>@DateTime.Now.ToString("MMMM dd, yyyy")</p>
+                </div><!-- /.latest-news-item-content -->
+            </li>
+        }
+    </ul><!-- /.latest-news-items -->
+</div><!-- /.section-foot -->

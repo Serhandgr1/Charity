@@ -1,0 +1,27 @@
+﻿@model SettingDto
+@using Microsoft.AspNetCore.Localization;
+@inject IViewLocalizer localizer
+
+<div class="footer-section">
+    <h4 class="footer-section-title">GET IN TOUCH!</h4>
+
+    <div class="footer-section-body">
+        <p><b>Address:</b> @localizer[@Model?.Address]</p>
+
+        <div class="footer-contacts">
+            <p>
+                <span>
+                    <i class="fas fa-phone"></i> Phone:
+                </span>
+                @localizer[@Model?.Phone]
+            </p>
+
+            <p>
+                <span>
+                    <i class="far fa-envelope"></i> Email:
+                </span>
+                <a href="mailto:@Model?.Email">@localizer[@Model?.Email]</a>
+            </p>
+        </div>
+    </div>
+</div>

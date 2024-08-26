@@ -1,0 +1,106 @@
+2024-07-18T11:02:32.0153016+03:00 0HN56VVS16P3I:00000001 [ERR] Failed executing DbCommand ("12"ms) [Parameters=["@__userId_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [i].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [IdentityRole] AS [i] ON [a].[RoleId] = [i].[Id]
+WHERE [a].[UserId] = @__userId_0" (627a98df)
+2024-07-18T11:02:32.2111135+03:00 0HN56VVS16P3I:00000001 [ERR] An exception occurred while iterating over the results of a query for context type '"Repositories.EFCore.RepositoryContext"'."
+""Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid object name 'IdentityRole'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__189_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:2dadbf52-9035-48a5-befa-2ddd561ebf06
+Error Number:208,State:1,Class:16" (f5c7ac34)
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid object name 'IdentityRole'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__189_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Identity.EntityFrameworkCore.UserStore`9.GetRolesAsync(TUser user, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Identity.UserManager`1.GetRolesAsync(TUser user)
+   at Microsoft.AspNetCore.Identity.UserClaimsPrincipalFactory`2.GenerateClaimsAsync(TUser user)
+   at Microsoft.AspNetCore.Identity.UserClaimsPrincipalFactory`1.CreateAsync(TUser user)
+   at Microsoft.AspNetCore.Identity.SignInManager`1.CreateUserPrincipalAsync(TUser user)
+   at Microsoft.AspNetCore.Identity.SecurityStampValidator`1.SecurityStampVerified(TUser user, CookieValidatePrincipalContext context)
+   at Microsoft.AspNetCore.Identity.SecurityStampValidator`1.ValidateAsync(CookieValidatePrincipalContext context)
+   at Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler.HandleAuthenticateAsync()
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.AuthenticateAsync()
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at AssociationWebApp.Localization.LocalizationMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\PC\source\repos\Charity\AssociationWebApp\Localization\LocalizationMiddleware.cs:line 21
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+ClientConnectionId:2dadbf52-9035-48a5-befa-2ddd561ebf06
+Error Number:208,State:1,Class:16
+2024-07-18T11:02:32.3170320+03:00 0HN56VVS16P3I:00000001 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid object name 'IdentityRole'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__189_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Identity.EntityFrameworkCore.UserStore`9.GetRolesAsync(TUser user, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Identity.UserManager`1.GetRolesAsync(TUser user)
+   at Microsoft.AspNetCore.Identity.UserClaimsPrincipalFactory`2.GenerateClaimsAsync(TUser user)
+   at Microsoft.AspNetCore.Identity.UserClaimsPrincipalFactory`1.CreateAsync(TUser user)
+   at Microsoft.AspNetCore.Identity.SignInManager`1.CreateUserPrincipalAsync(TUser user)
+   at Microsoft.AspNetCore.Identity.SecurityStampValidator`1.SecurityStampVerified(TUser user, CookieValidatePrincipalContext context)
+   at Microsoft.AspNetCore.Identity.SecurityStampValidator`1.ValidateAsync(CookieValidatePrincipalContext context)
+   at Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler.HandleAuthenticateAsync()
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.AuthenticateAsync()
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at AssociationWebApp.Localization.LocalizationMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\PC\source\repos\Charity\AssociationWebApp\Localization\LocalizationMiddleware.cs:line 21
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+ClientConnectionId:2dadbf52-9035-48a5-befa-2ddd561ebf06
+Error Number:208,State:1,Class:16
+2024-07-18T11:05:35.9717693+03:00  [ERR] Failed executing DbCommand ("6"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""DELETE FROM [IdentityRole]
+WHERE [Id] = N'15ce52dc-04b4-4f11-9c75-5a417987159c';
+SELECT @@ROWCOUNT;" (627a98df)
+2024-07-18T11:06:02.7112364+03:00  [ERR] Failed executing DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""DELETE FROM [IdentityRole]
+WHERE [Id] = N'15ce52dc-04b4-4f11-9c75-5a417987159c';
+SELECT @@ROWCOUNT;" (627a98df)
+2024-07-18T11:07:28.6437550+03:00  [ERR] Failed executing DbCommand ("16"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'ConcurrencyStamp', N'Name', N'NormalizedName') AND [object_id] = OBJECT_ID(N'[IdentityRole]'))
+    SET IDENTITY_INSERT [IdentityRole] ON;
+INSERT INTO [IdentityRole] ([Id], [ConcurrencyStamp], [Name], [NormalizedName])
+VALUES (N'588070cd-71d0-4833-9558-6d60a82057c5', N'e0ce78ed-17df-4015-9c9b-b918fa988629', N'User', N'USER');
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'ConcurrencyStamp', N'Name', N'NormalizedName') AND [object_id] = OBJECT_ID(N'[IdentityRole]'))
+    SET IDENTITY_INSERT [IdentityRole] OFF;" (627a98df)

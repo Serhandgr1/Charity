@@ -1,0 +1,109 @@
+﻿@model List<BlogDto>
+@inject IViewLocalizer Localizer
+
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <script type="text/javascript">
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', '__gaTracker');
+
+        __gaTracker('create', 'UA-348094-43', 'auto', { 'allowLinker': true });
+        __gaTracker('set', 'forceSSL', true);
+        __gaTracker('require', 'linker');
+        __gaTracker('linker:autoLink', ['wplook.com']);
+        __gaTracker('send', 'pageview');
+    </script>
+
+    <div class="wrapper">
+        <div class="main">
+            <div class="main-head">
+                <div class="main-head-image fullscreener">
+                    <img src="assets/images/temp/main-image-1.jpg" height="209" width="1800" alt="">
+                </div><!-- /.main-head-image fullscreener -->
+
+                <div class="main-head-content">
+                    <div class="grid-container">
+                        <div class="grid-x grid-margin-x">
+                            <div class="cell small-12">
+                                <h1 class="main-title">@Localizer["Event"]</h1><!-- /.main-title -->
+
+                                <ul class="breadcrumbs">
+                                    <li>
+                                        <a href="#">@Localizer["Home"]</a>
+                                    </li>
+
+                                    <li class="current">
+                                        <a href="#">@Localizer["Event"]</a>
+                                    </li><!-- /.current -->
+                                </ul><!-- /.breadcrumbs -->
+                            </div><!-- /.cell small-12 -->
+                        </div>
+                    </div><!-- /.row -->
+                </div><!-- /.main-head-content -->
+            </div><!-- /.main-head -->
+
+            <div class="main-body">
+                <section class="section-events">
+                    <div class="grid-container">
+                        <div class="grid-x grid-margin-x">
+                            <div class="cell small-12">
+                                <div class="grid-x grid-margin-x small-up-1 medium-up-2 large-up-3">
+                                    @if (Model != null && Model.Any())
+                                    {
+                                        @foreach (var blog in Model)
+                                        {
+                                            if (blog.BlogTypeId == (int)BlogTypes.Events)
+                                            {
+                                                <div class="cell event" itemscope itemtype="https://schema.org/Event">
+                                                    <div class="event-image">
+                                                        <a href="@Url.Action("Details", "Blog", new { id = blog.Id })">
+                                                            <img style="width:370px; height:205px;" src="@blog.Image" alt="@blog.Title" itemprop="image" />
+                                                        </a>
+                                                    </div><!-- /.event-image -->
+
+                                                    <h4 class="event-title">
+                                                        <a href="@Url.Action("Details", "Blog", new { id = blog.Id })" itemprop="name">@Localizer[@blog.Title]</a>
+                                                    </h4><!-- /.event-title -->
+
+                                                    <div class="event-meta">
+                                                        <span>
+                                                            <i class="far fa-calendar-alt">@DateTime.Now.ToString("dd MMMM yyyy 'at' hh:mm tt")</i>
+                                                        </span>
+                                                    </div><!-- /.event-meta -->
+
+                                                    <div class="event-entry">
+                                                        <p itemprop="description">@Html.Raw(blog.Content)</p>
+                                                    </div><!-- /.event-entry -->
+
+                                                    <div class="event-actions">
+                                                        <a href="@Url.Action("Details", "Blog", new { id = blog.Id })" class="button">@Localizer["More"]</a>
+                                                        <a href="#" class="button button-facebook">
+                                                            <i class="fab fa-facebook-f"></i>
+                                                        </a>
+                                                    </div><!-- /.event-actions -->
+                                                </div>
+
+                                                <!-- /.event -->
+                                            }
+                                        }
+                                    }
+                                    else
+                                    {
+                                        <p>@Localizer["No events found."]</p>
+                                    }
+                                </div><!-- /.grid-x grid-margin-x small-up-1 medium-up-2 large-up-3 -->
+                            </div><!-- /.cell small-12 -->
+                        </div>
+                    </div><!-- /.row -->
+                </section><!-- /.section-events -->
+            </div><!-- /.main-body -->
+
+        </div><!-- /.main -->
+    </div><!-- /.wrapper -->
+</body>
+</html>

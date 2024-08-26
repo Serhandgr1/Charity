@@ -1,0 +1,113 @@
+/*
+Theme Name: Charity
+Author: Victor Tihai
+Author URI: https://wplook.com/
+Description: Premium HTML template for Charity, NGO, Foundation.
+Version: 2.0.0
+License: GNU General Public License - You are not allowed to remove the footer credits, Footer Credits Must Remain in Place!
+You can remove the Footer Credits if you buy the "Regular License". https://wplook.com/product/html-templates/nonprofit/charity-html-template/?utm_source=Free&utm_medium=link&utm_campaign=Charity_HTML
+*/
+
+/* TABLE OF CONTENT
+- [ Variables;
+- [ Settings;
+- [ Foundation;
+- [ Font Awesome;
+- [ Animations;
+- [ OWL Carousel;
+- [ Bar;
+- [ Header;
+- [ Sections;
+- [ Footer;
+- [ Main;
+- [ Sidebar;
+- [ Content;
+- [ Buttons;
+- [ Navigation;
+- [ Sllider;
+- [ Progress Bar;
+- [ Latest News;
+- [ Events;
+- [ Projects;
+- [ Staff;
+- [ Callout;
+- [ List;
+- [ Subscribe;
+- [ Breadcrumbs;
+- [ Widget;
+- [ Post;
+- [ Pagination;
+- [ Socials;
+- [ Comments;
+- [ Cause;
+- [ Tabs;
+- [ Form;
+- [ Error;
+*/
+
+
+//	The utils/ folder gathers all Sass tools and helpers used across the project.
+//	Every global variable, function, mixin and placeholder should be put in here.
+
+	@import 'util/util';
+	@import 'utils/mixin.scss';
+	@import 'utils/themesettings.scss';
+
+	@import 'motion-ui';
+
+// Regions
+@import 'regions/bar';
+@import 'regions/header';
+@import 'regions/section';
+@import 'regions/footer';
+@import 'regions/main';
+@import 'regions/sidebar';
+@import 'regions/content';
+
+// Modules
+@import 'modules/button';
+@import 'modules/navigation';
+@import 'modules/slider';
+@import 'modules/progressbar';
+@import 'modules/latest-news';
+@import 'modules/event';
+@import 'modules/project';
+@import 'modules/staff';
+@import 'modules/callout';
+@import 'modules/list';
+@import 'modules/subscribe';
+@import 'modules/breadcrumbs';
+@import 'modules/widget';
+@import 'modules/post';
+@import 'modules/pagination';
+@import 'modules/socials';
+@import 'modules/comments';
+@import 'modules/cause';
+@import 'modules/tabs';
+@import 'modules/form';
+@import 'modules/error';
+
+
+
+//	The base/ folder holds what we might call the boilerplate code for the project.
+//	In there, you might find the some typographic rules, and some standard styles for commonly used HTML elements.
+
+//	The layout/ folder contains everything that takes part in laying out the site or application.
+//	This folder could have stylesheets for the main parts of the site (header, footer, menu, sidebar…)
+
+	@import 'layout/elements.scss';
+	@import 'layout/owl.scss';
+
+
+
+
+//	If you have page-specific styles, it is better to put them in a pages/ folder, in a file named after the page.
+
+
+	//@import 'page/contact.scss';
+
+	/* Motion ui Transitions */
+	@include motion-ui-transitions;
+
+	/* Motion ui Animations */
+	@include motion-ui-animations;

@@ -1,0 +1,153 @@
+﻿@inject IViewLocalizer Localizer
+
+<div class="callout">
+    <div class="grid-container">
+        <div class="grid-x grid-margin-x">
+            <div class="cell small-12 large-5">
+                <h2 class="callout-title">@Localizer["Change Their World. Change Yours. This changes everything."]</h2><!-- /.callout-title -->
+            </div><!-- /.cell large-6 -->
+
+            <div class="cell small-12 large-7">
+                <div class="callout-actions">
+                    <a href="#" class="button">@Localizer["Become Volunteer"]</a>
+
+                    <span class="callout-separator">
+                        <span>@Localizer["Or"]</span>
+                    </span>
+
+                    <a href="#" class="button">@Localizer["Donate For Cause"]</a>
+                </div><!-- /.callout-actions -->
+            </div><!-- /.cell large-6 -->
+        </div>
+    </div><!-- /.row -->
+</div><!-- /.callout -->
+
+<footer class="footer">
+    <div class="footer-body">
+        <div class="grid-container">
+            <div class="grid-x grid-margin-x">
+                <div class="cell small-12 medium-auto">
+                    <div class="footer-section">
+                        <h4 class="footer-section-title">@Localizer["About Charity"]</h4><!-- /.footer-section-title -->
+
+                        <div class="footer-section-body">
+                            <p>@Localizer["Charity vitae diam pulvinar, tempus dia aliquam tellus. Quisque mattis odio eu placerat luctus. Vivamus magna elit, ultrices non lacinia vel, tempor vitae tell Fusce sit amet sem sit amet."]</p>
+                        </div><!-- /.footer-section-body -->
+                    </div><!-- /.footer-section -->
+                </div><!-- /.cell small-12 medium-auto -->
+
+                <div class="cell small-12 medium-auto">
+                    <div class="footer-section">
+                        <h4 class="footer-section-title">@Localizer["Quick Links"]</h4><!-- /.footer-section-title -->
+
+                        <div class="footer-section-body">
+                            <ul class="list-links">
+                                <li>
+                                    <a href="#">@Localizer["Causes"]</a>
+                                </li>
+                                <li>
+                                    <a href="#">@Localizer["Projects"]</a>
+                                </li>
+                                <li>
+                                    <a href="#">@Localizer["Gallery"]</a>
+                                </li>
+                            </ul><!-- /.list-links -->
+
+                            <ul class="list-links">
+                                <li>
+                                    <a href="#">@Localizer["Terms Of Use"]</a>
+                                </li>
+                                <li>
+                                    <a href="#">@Localizer["Legal Disclaimer"]</a>
+                                </li>
+                                <li>
+                                    <a href="#">@Localizer["Privacy Policy"]</a>
+                                </li>
+                            </ul><!-- /.list-links -->
+                        </div><!-- /.footer-section-body -->
+                    </div><!-- /.footer-section -->
+                </div><!-- /.cell small-12 medium-auto -->
+
+                <div class="cell small-12 medium-auto">
+                    <div class="footer-section">
+                        <h4 class="footer-section-title">@Localizer["Newsletter Signup"]</h4><!-- /.footer-section-title -->
+
+                        <div class="footer-section-body">
+                            <p>@Localizer["Select your newsletters, enter your email address, and click 'Subscribe'"]</p>
+
+                            <div class="subscribe">
+                                <form action="?" method="post">
+                                    <input type="submit" value="@Localizer["Go"]" class="subscribe-btn">
+
+                                    <div class="subscribe-inner">
+                                        <input type="email" id="mail" name="mail" value="" placeholder="@Localizer["Email Address"]" class="subscribe-field">
+                                    </div><!-- /.subscribe-inner -->
+                                </form>
+                            </div><!-- /.subscribe -->
+                        </div><!-- /.footer-section-body -->
+                    </div><!-- /.footer-section -->
+                </div><!-- /.cell small-12 medium-auto -->
+
+                <div class="cell small-12 medium-auto">
+                    @await Component.InvokeAsync("ContactUs")
+                </div><!-- /.cell small-12 medium-12 -->
+
+                <div class="cell small-12 medium-auto">
+                    <!-- New Section for Membership Form Link -->
+                    <div class="footer-section">
+                        <h4 class="footer-section-title">@Localizer["Share Your Information"]</h4><!-- /.footer-section-title -->
+
+                        <div class="footer-section-body">
+                            <p>@Localizer["Want to share your information with us? Click below to fill out the membership survey form."]</p>
+                            <a href="@Url.Action("Create", "MemberShip")" class="button">@Localizer["Fill Membership Form"]</a>
+                        </div><!-- /.footer-section-body -->
+                    </div><!-- /.footer-section -->
+                </div><!-- /.cell small-12 medium-auto -->
+            </div>
+        </div><!-- /.grid -->
+    </div><!-- /.footer-body -->
+
+    <div class="footer-bar">
+        <div class="grid-container">
+            <div class="grid-x grid-margin-x">
+                <div class="cell small-12">
+                    <div class="footer-credits">
+                        <p>
+                            <!-- IMPORTANT: You are not allowed to remove the footer credits, Footer Credits Must Remain in Place!
+                            You can remove the Footer Credits if you buy the "Regular License".  -->
+                            @Localizer["Copyright 2019. All Rights Reserved by Charity Theme. Designed by"] <a href="https://wplook.com/product/html-templates/nonprofit/charity-html-template/?utm_source=Footer-URL&utm_medium=link&utm_campaign=Charity_HTML">@Localizer["WPlook Themes"]</a>
+                        </p>
+                    </div><!-- /.footer-credits -->
+
+                    <div class="footer-socials">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    <i class="fab fa-google-plus-g"></i>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div><!-- /.footer-socials -->
+                </div><!-- /.cell small-12 -->
+            </div>
+        </div>
+    </div>
+</footer>

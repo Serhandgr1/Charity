@@ -1,0 +1,32 @@
+﻿@model List<BlogDto>
+@inject IViewLocalizer localizer
+@foreach (var blog in Model)
+{
+    <li class="slide">
+        <div class="cause">
+            <div class="cause-image">
+                <a href="@Url.Action("Details", "Blog", new { id = blog.Id })">
+                    @*<img src="@blog.Image" height="175" width="270" alt="@blog.Title">*@
+                    <img style="width:270px; height:175px;" src="@blog.Image" />
+                </a>
+                <div class="cause-tag">@blog.BlogCategory</div><!-- /.cause-tag -->
+            </div><!-- /.cause-image -->
+
+            <div class="cause-body">
+                <div class="cause-head">
+                    <h3 class="cause-title">@localizer[@blog.Title]</h3><!-- /.cause-title -->
+                </div><!-- /.cause-head -->
+
+                <div class="cause-entry">
+                    <p>@localizer[blog.Content]</p>
+                </div><!-- /.cause-entry -->
+
+                <div class="cause-actions">
+                    <a href="@Url.Action("Details", "Blog", new { id = blog.Id })" class="button">@localizer["Donate Now"]</a>
+                </div><!-- /.cause-actions -->
+            </div><!-- /.cause-body -->
+        </div>
+    </li>
+
+    <!-- /.slide -->
+}

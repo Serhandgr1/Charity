@@ -1,0 +1,414 @@
+2024-08-16T03:14:39.6944437+03:00 0HN5TH1I5D5B1:00000075 [ERR] The view '"Delete"' was not found. Searched locations: ["/Areas/Admin/Views/Answer/Delete.kr-KR.kr-KR.cshtml", "/Areas/Admin/Views/Answer/Delete.kr.kr-KR.cshtml", "/Areas/Admin/Views/Answer/Delete.kr-KR.cshtml", "/Areas/Admin/Views/Answer/Delete.kr-KR.kr.cshtml", "/Areas/Admin/Views/Answer/Delete.kr.kr.cshtml", "/Areas/Admin/Views/Answer/Delete.kr.cshtml", "/Areas/Admin/Views/Answer/Delete.kr-KR.cshtml", "/Areas/Admin/Views/Answer/Delete.kr.cshtml", "/Areas/Admin/Views/Answer/Delete.cshtml", "/Areas/Admin/Views/Shared/Delete.kr-KR.kr-KR.cshtml", "/Areas/Admin/Views/Shared/Delete.kr.kr-KR.cshtml", "/Areas/Admin/Views/Shared/Delete.kr-KR.cshtml", "/Areas/Admin/Views/Shared/Delete.kr-KR.kr.cshtml", "/Areas/Admin/Views/Shared/Delete.kr.kr.cshtml", "/Areas/Admin/Views/Shared/Delete.kr.cshtml", "/Areas/Admin/Views/Shared/Delete.kr-KR.cshtml", "/Areas/Admin/Views/Shared/Delete.kr.cshtml", "/Areas/Admin/Views/Shared/Delete.cshtml", "/Views/Shared/Delete.kr-KR.kr-KR.cshtml", "/Views/Shared/Delete.kr.kr-KR.cshtml", "/Views/Shared/Delete.kr-KR.cshtml", "/Views/Shared/Delete.kr-KR.kr.cshtml", "/Views/Shared/Delete.kr.kr.cshtml", "/Views/Shared/Delete.kr.cshtml", "/Views/Shared/Delete.kr-KR.cshtml", "/Views/Shared/Delete.kr.cshtml", "/Views/Shared/Delete.cshtml", "/Pages/Shared/Delete.kr-KR.kr-KR.cshtml", "/Pages/Shared/Delete.kr.kr-KR.cshtml", "/Pages/Shared/Delete.kr-KR.cshtml", "/Pages/Shared/Delete.kr-KR.kr.cshtml", "/Pages/Shared/Delete.kr.kr.cshtml", "/Pages/Shared/Delete.kr.cshtml", "/Pages/Shared/Delete.kr-KR.cshtml", "/Pages/Shared/Delete.kr.cshtml", "/Pages/Shared/Delete.cshtml"] (9bb2756c)
+2024-08-16T03:14:39.7853076+03:00 0HN5TH1I5D5B1:00000075 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.InvalidOperationException: The view 'Delete' was not found. The following locations were searched:
+/Areas/Admin/Views/Answer/Delete.kr-KR.kr-KR.cshtml
+/Areas/Admin/Views/Answer/Delete.kr.kr-KR.cshtml
+/Areas/Admin/Views/Answer/Delete.kr-KR.cshtml
+/Areas/Admin/Views/Answer/Delete.kr-KR.kr.cshtml
+/Areas/Admin/Views/Answer/Delete.kr.kr.cshtml
+/Areas/Admin/Views/Answer/Delete.kr.cshtml
+/Areas/Admin/Views/Answer/Delete.kr-KR.cshtml
+/Areas/Admin/Views/Answer/Delete.kr.cshtml
+/Areas/Admin/Views/Answer/Delete.cshtml
+/Areas/Admin/Views/Shared/Delete.kr-KR.kr-KR.cshtml
+/Areas/Admin/Views/Shared/Delete.kr.kr-KR.cshtml
+/Areas/Admin/Views/Shared/Delete.kr-KR.cshtml
+/Areas/Admin/Views/Shared/Delete.kr-KR.kr.cshtml
+/Areas/Admin/Views/Shared/Delete.kr.kr.cshtml
+/Areas/Admin/Views/Shared/Delete.kr.cshtml
+/Areas/Admin/Views/Shared/Delete.kr-KR.cshtml
+/Areas/Admin/Views/Shared/Delete.kr.cshtml
+/Areas/Admin/Views/Shared/Delete.cshtml
+/Views/Shared/Delete.kr-KR.kr-KR.cshtml
+/Views/Shared/Delete.kr.kr-KR.cshtml
+/Views/Shared/Delete.kr-KR.cshtml
+/Views/Shared/Delete.kr-KR.kr.cshtml
+/Views/Shared/Delete.kr.kr.cshtml
+/Views/Shared/Delete.kr.cshtml
+/Views/Shared/Delete.kr-KR.cshtml
+/Views/Shared/Delete.kr.cshtml
+/Views/Shared/Delete.cshtml
+/Pages/Shared/Delete.kr-KR.kr-KR.cshtml
+/Pages/Shared/Delete.kr.kr-KR.cshtml
+/Pages/Shared/Delete.kr-KR.cshtml
+/Pages/Shared/Delete.kr-KR.kr.cshtml
+/Pages/Shared/Delete.kr.kr.cshtml
+/Pages/Shared/Delete.kr.cshtml
+/Pages/Shared/Delete.kr-KR.cshtml
+/Pages/Shared/Delete.kr.cshtml
+/Pages/Shared/Delete.cshtml
+   at Microsoft.AspNetCore.Mvc.ViewEngines.ViewEngineResult.EnsureSuccessful(IEnumerable`1 originalLocations)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at AssociationWebApp.Localization.LocalizationMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\serka\Source\Repos\Charity\AssociationWebApp\Localization\LocalizationMiddleware.cs:line 21
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2024-08-16T03:24:29.2016353+03:00 0HN5TH6LSTCFN:000000CD [ERR] The view '"Delete"' was not found. Searched locations: ["/Areas/Admin/Views/Answer/Delete.kr-KR.kr-KR.cshtml", "/Areas/Admin/Views/Answer/Delete.kr.kr-KR.cshtml", "/Areas/Admin/Views/Answer/Delete.kr-KR.cshtml", "/Areas/Admin/Views/Answer/Delete.kr-KR.kr.cshtml", "/Areas/Admin/Views/Answer/Delete.kr.kr.cshtml", "/Areas/Admin/Views/Answer/Delete.kr.cshtml", "/Areas/Admin/Views/Answer/Delete.kr-KR.cshtml", "/Areas/Admin/Views/Answer/Delete.kr.cshtml", "/Areas/Admin/Views/Answer/Delete.cshtml", "/Areas/Admin/Views/Shared/Delete.kr-KR.kr-KR.cshtml", "/Areas/Admin/Views/Shared/Delete.kr.kr-KR.cshtml", "/Areas/Admin/Views/Shared/Delete.kr-KR.cshtml", "/Areas/Admin/Views/Shared/Delete.kr-KR.kr.cshtml", "/Areas/Admin/Views/Shared/Delete.kr.kr.cshtml", "/Areas/Admin/Views/Shared/Delete.kr.cshtml", "/Areas/Admin/Views/Shared/Delete.kr-KR.cshtml", "/Areas/Admin/Views/Shared/Delete.kr.cshtml", "/Areas/Admin/Views/Shared/Delete.cshtml", "/Views/Shared/Delete.kr-KR.kr-KR.cshtml", "/Views/Shared/Delete.kr.kr-KR.cshtml", "/Views/Shared/Delete.kr-KR.cshtml", "/Views/Shared/Delete.kr-KR.kr.cshtml", "/Views/Shared/Delete.kr.kr.cshtml", "/Views/Shared/Delete.kr.cshtml", "/Views/Shared/Delete.kr-KR.cshtml", "/Views/Shared/Delete.kr.cshtml", "/Views/Shared/Delete.cshtml", "/Pages/Shared/Delete.kr-KR.kr-KR.cshtml", "/Pages/Shared/Delete.kr.kr-KR.cshtml", "/Pages/Shared/Delete.kr-KR.cshtml", "/Pages/Shared/Delete.kr-KR.kr.cshtml", "/Pages/Shared/Delete.kr.kr.cshtml", "/Pages/Shared/Delete.kr.cshtml", "/Pages/Shared/Delete.kr-KR.cshtml", "/Pages/Shared/Delete.kr.cshtml", "/Pages/Shared/Delete.cshtml"] (9bb2756c)
+2024-08-16T03:24:29.3425152+03:00 0HN5TH6LSTCFN:000000CD [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.InvalidOperationException: The view 'Delete' was not found. The following locations were searched:
+/Areas/Admin/Views/Answer/Delete.kr-KR.kr-KR.cshtml
+/Areas/Admin/Views/Answer/Delete.kr.kr-KR.cshtml
+/Areas/Admin/Views/Answer/Delete.kr-KR.cshtml
+/Areas/Admin/Views/Answer/Delete.kr-KR.kr.cshtml
+/Areas/Admin/Views/Answer/Delete.kr.kr.cshtml
+/Areas/Admin/Views/Answer/Delete.kr.cshtml
+/Areas/Admin/Views/Answer/Delete.kr-KR.cshtml
+/Areas/Admin/Views/Answer/Delete.kr.cshtml
+/Areas/Admin/Views/Answer/Delete.cshtml
+/Areas/Admin/Views/Shared/Delete.kr-KR.kr-KR.cshtml
+/Areas/Admin/Views/Shared/Delete.kr.kr-KR.cshtml
+/Areas/Admin/Views/Shared/Delete.kr-KR.cshtml
+/Areas/Admin/Views/Shared/Delete.kr-KR.kr.cshtml
+/Areas/Admin/Views/Shared/Delete.kr.kr.cshtml
+/Areas/Admin/Views/Shared/Delete.kr.cshtml
+/Areas/Admin/Views/Shared/Delete.kr-KR.cshtml
+/Areas/Admin/Views/Shared/Delete.kr.cshtml
+/Areas/Admin/Views/Shared/Delete.cshtml
+/Views/Shared/Delete.kr-KR.kr-KR.cshtml
+/Views/Shared/Delete.kr.kr-KR.cshtml
+/Views/Shared/Delete.kr-KR.cshtml
+/Views/Shared/Delete.kr-KR.kr.cshtml
+/Views/Shared/Delete.kr.kr.cshtml
+/Views/Shared/Delete.kr.cshtml
+/Views/Shared/Delete.kr-KR.cshtml
+/Views/Shared/Delete.kr.cshtml
+/Views/Shared/Delete.cshtml
+/Pages/Shared/Delete.kr-KR.kr-KR.cshtml
+/Pages/Shared/Delete.kr.kr-KR.cshtml
+/Pages/Shared/Delete.kr-KR.cshtml
+/Pages/Shared/Delete.kr-KR.kr.cshtml
+/Pages/Shared/Delete.kr.kr.cshtml
+/Pages/Shared/Delete.kr.cshtml
+/Pages/Shared/Delete.kr-KR.cshtml
+/Pages/Shared/Delete.kr.cshtml
+/Pages/Shared/Delete.cshtml
+   at Microsoft.AspNetCore.Mvc.ViewEngines.ViewEngineResult.EnsureSuccessful(IEnumerable`1 originalLocations)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at AssociationWebApp.Localization.LocalizationMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\serka\Source\Repos\Charity\AssociationWebApp\Localization\LocalizationMiddleware.cs:line 21
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2024-08-16T11:47:45.0945860+03:00 0HN5TQ01HRLMN:00000021 [ERR] Failed executing DbCommand ("10"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [q].[Id], [q].[SurveyId], [q].[Text], [a].[Id], [a].[QuestionId], [a].[SurveyId], [a].[Text]
+FROM [Questions] AS [q]
+LEFT JOIN [Answers] AS [a] ON [q].[Id] = [a].[QuestionId]
+ORDER BY [q].[Id]" (627a98df)
+2024-08-16T11:47:45.1883695+03:00 0HN5TQ01HRLMN:00000021 [ERR] An exception occurred while iterating over the results of a query for context type '"Repositories.EFCore.RepositoryContext"'."
+""Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'SurveyId'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__189_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:4c79491b-1b1b-4d94-92e3-b14f8c7a8b58
+Error Number:207,State:1,Class:16" (f5c7ac34)
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'SurveyId'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__189_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+ClientConnectionId:4c79491b-1b1b-4d94-92e3-b14f8c7a8b58
+Error Number:207,State:1,Class:16
+2024-08-16T11:47:45.3244304+03:00 0HN5TQ01HRLMN:00000021 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'SurveyId'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__189_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Repositories.EFCore.RepositoryQuestion.Read(Boolean trackChanges) in C:\Users\serka\source\repos\Charity\Repositories\EFCore\RepositoryQuestion.cs:line 29
+   at Services.EFCore.QuestionService.GetAllQuestions() in C:\Users\serka\source\repos\Charity\Services\EFCore\QuestionService.cs:line 26
+   at AssociationWebApp.Areas.Admin.Controllers.QuestionController.Show() in C:\Users\serka\source\repos\Charity\AssociationWebApp\Areas\Admin\Controllers\QuestionController.cs:line 23
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at AssociationWebApp.Localization.LocalizationMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\serka\source\repos\Charity\AssociationWebApp\Localization\LocalizationMiddleware.cs:line 21
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+ClientConnectionId:4c79491b-1b1b-4d94-92e3-b14f8c7a8b58
+Error Number:207,State:1,Class:16
+2024-08-16T11:50:40.0552305+03:00 0HN5TQ19HAI56:00000021 [ERR] Failed executing DbCommand ("7"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [q].[Id], [q].[SurveyId], [q].[Text], [a].[Id], [a].[QuestionId], [a].[SurveyId], [a].[Text]
+FROM [Questions] AS [q]
+LEFT JOIN [Answers] AS [a] ON [q].[Id] = [a].[QuestionId]
+ORDER BY [q].[Id]" (627a98df)
+2024-08-16T11:50:40.1014462+03:00 0HN5TQ19HAI56:00000021 [ERR] An exception occurred while iterating over the results of a query for context type '"Repositories.EFCore.RepositoryContext"'."
+""Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'SurveyId'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__189_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:13357f2f-4b66-4de5-9f9b-19c6e9b5b6c3
+Error Number:207,State:1,Class:16" (f5c7ac34)
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'SurveyId'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__189_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+ClientConnectionId:13357f2f-4b66-4de5-9f9b-19c6e9b5b6c3
+Error Number:207,State:1,Class:16
+2024-08-16T11:50:40.2365294+03:00 0HN5TQ19HAI56:00000021 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'SurveyId'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__189_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Repositories.EFCore.RepositoryQuestion.Read(Boolean trackChanges) in C:\Users\serka\source\repos\Charity\Repositories\EFCore\RepositoryQuestion.cs:line 29
+   at Services.EFCore.QuestionService.GetAllQuestions() in C:\Users\serka\source\repos\Charity\Services\EFCore\QuestionService.cs:line 26
+   at AssociationWebApp.Areas.Admin.Controllers.QuestionController.Show() in C:\Users\serka\source\repos\Charity\AssociationWebApp\Areas\Admin\Controllers\QuestionController.cs:line 23
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at AssociationWebApp.Localization.LocalizationMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\serka\source\repos\Charity\AssociationWebApp\Localization\LocalizationMiddleware.cs:line 21
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+ClientConnectionId:13357f2f-4b66-4de5-9f9b-19c6e9b5b6c3
+Error Number:207,State:1,Class:16
+2024-08-16T11:52:54.5268177+03:00 0HN5TQ19HAI56:00000039 [ERR] Failed executing DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [q].[Id], [q].[SurveyId], [q].[Text], [a].[Id], [a].[QuestionId], [a].[SurveyId], [a].[Text]
+FROM [Questions] AS [q]
+LEFT JOIN [Answers] AS [a] ON [q].[Id] = [a].[QuestionId]
+ORDER BY [q].[Id]" (627a98df)
+2024-08-16T11:52:54.5278300+03:00 0HN5TQ19HAI56:00000039 [ERR] An exception occurred while iterating over the results of a query for context type '"Repositories.EFCore.RepositoryContext"'."
+""Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'SurveyId'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__189_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:13357f2f-4b66-4de5-9f9b-19c6e9b5b6c3
+Error Number:207,State:1,Class:16" (f5c7ac34)
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'SurveyId'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__189_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Repositories.EFCore.RepositoryQuestion.Read(Boolean trackChanges) in C:\Users\serka\source\repos\Charity\Repositories\EFCore\RepositoryQuestion.cs:line 29
+ClientConnectionId:13357f2f-4b66-4de5-9f9b-19c6e9b5b6c3
+Error Number:207,State:1,Class:16
+2024-08-16T11:52:54.6556823+03:00 0HN5TQ19HAI56:00000039 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'SurveyId'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__189_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Repositories.EFCore.RepositoryQuestion.Read(Boolean trackChanges) in C:\Users\serka\source\repos\Charity\Repositories\EFCore\RepositoryQuestion.cs:line 29
+   at Services.EFCore.QuestionService.GetAllQuestions() in C:\Users\serka\source\repos\Charity\Services\EFCore\QuestionService.cs:line 26
+   at AssociationWebApp.Controllers.SurveyController.Index() in C:\Users\serka\source\repos\Charity\AssociationWebApp\Controllers\SurveyController.cs:line 21
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at AssociationWebApp.Localization.LocalizationMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\serka\source\repos\Charity\AssociationWebApp\Localization\LocalizationMiddleware.cs:line 21
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+ClientConnectionId:13357f2f-4b66-4de5-9f9b-19c6e9b5b6c3
+Error Number:207,State:1,Class:16
+2024-08-16T12:27:33.9034938+03:00  [ERR] Failed executing DbCommand ("23"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""DECLARE @var0 sysname;
+SELECT @var0 = [d].[name]
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[Questions]') AND [c].[name] = N'SurveyId');
+IF @var0 IS NOT NULL EXEC(N'ALTER TABLE [Questions] DROP CONSTRAINT [' + @var0 + '];');
+ALTER TABLE [Questions] ALTER COLUMN [SurveyId] int NOT NULL;
+ALTER TABLE [Questions] ADD DEFAULT 0 FOR [SurveyId];" (627a98df)
+2024-08-16T14:21:47.8199681+03:00 0HN5TSMCSCEIN:00000017 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.InvalidOperationException: The model item passed into the ViewDataDictionary is of type 'System.Collections.Generic.List`1[Entities.ModelDto.QuestionDto]', but this ViewDataDictionary instance requires a model item of type 'System.Collections.Generic.IEnumerable`1[Entities.ModelDto.SurveyDto]'.
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewDataDictionary.EnsureCompatible(Object value)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewDataDictionary..ctor(ViewDataDictionary source, Object model, Type declaredModelType)
+   at lambda_method281(Closure , ViewDataDictionary )
+   at Microsoft.AspNetCore.Mvc.Razor.RazorPagePropertyActivator.CreateViewDataDictionary(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorPagePropertyActivator.Activate(Object page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorPageActivator.Activate(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at AssociationWebApp.Localization.LocalizationMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\serka\source\repos\Charity\AssociationWebApp\Localization\LocalizationMiddleware.cs:line 21
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)

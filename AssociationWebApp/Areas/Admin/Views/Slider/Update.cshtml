@@ -1,0 +1,131 @@
+﻿@using AssociationWebApp.Extension
+
+@{
+    ViewData["Title"] = "Update";
+    Layout = "~/Areas/Admin/Views/Shared/Admin_Layout.cshtml";
+}
+@model SliderDto
+<!-- Start Content-->
+<div class="container-fluid">
+
+    <!-- end page title -->
+    <div class="row">
+
+        <div class="col-xl-6">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="header-title">Update Slider </h4>
+
+                </div>
+                <div class="card-body">
+                    <form action="/Slider/Update" method="post" enctype="multipart/form-data">
+                        <ul class="nav nav-pills bg-nav-pills nav-justified mb-3" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <a href="#english" data-bs-toggle="tab" aria-expanded="true" class="nav-link rounded-0 active" aria-selected="true" role="tab">
+                                    English
+                                </a>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <a href="#kurdish" data-bs-toggle="tab" aria-expanded="false" class="nav-link rounded-0 " aria-selected="false" role="tab" tabindex="-1">
+                                    Kurdish
+                                </a>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <a href="#turkish" data-bs-toggle="tab" aria-expanded="false" class="nav-link rounded-0 " aria-selected="false" role="tab" tabindex="-1">
+                                    Turkish
+                                </a>
+                            </li>
+                        </ul>
+
+                        <div class="tab-content">
+                          
+                            <div class="tab-pane active show" id="english" role="tabpanel">
+                                <div class="mb-3">
+                                    <label for="simpleinput" class="form-label">Name(En)</label>
+                                    <input type="text" name="Title" asp-for="@Model.Title" value="@LocalizationExtension.GetLocalization(Model.Title, "en-US")" class="form-control">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="simpleinput" class="form-label">Content(En)</label>
+                                    <textarea id="Content" asp-for="@Model.Content" name="Content">@LocalizationExtension.GetLocalization(Model.Content, "en-US")</textarea>
+                                </div>
+
+                            </div>
+                            <div class="tab-pane" id="kurdish" role="tabpanel">
+
+                                <div class="mb-3">
+                                    <label for="simpleinput" class="form-label">Name(Kr)</label>
+                                    <input type="text" name="TitleKr" asp-for="@Model.TitleKr" value="@LocalizationExtension.GetLocalization(Model.Title, "kr-KR")" class="form-control">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="simpleinput" class="form-label">Content(Kr)</label>
+                                    <textarea id="ContentKr" name="ContentKr">@LocalizationExtension.GetLocalization(Model.Content, "kr-KR")</textarea>
+                                </div>
+
+                            </div>
+                            <div class="tab-pane" id="turkish" role="tabpanel">
+
+                                <div class="mb-3">
+                                    <label for="simpleinput" class="form-label">Name(Tr)</label>
+                                    <input type="text" name="TitleTr" asp-for="@Model.TitleTr" value="@LocalizationExtension.GetLocalization(Model.Title, "tr-TR")" class="form-control">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="simpleinput" class="form-label">Content(Tr)</label>
+                                    <textarea id="ContentTr" name="ContentTr">@LocalizationExtension.GetLocalization(Model.Content, "tr-TR")</textarea>
+                                </div>
+
+                            </div>
+                            <div class="mb-3">
+                                <label for="example-fileinput" class="form-label">Image</label>
+                                <img src="~/@Model.Image"
+                                     class="me-2 rounded-circle" style="max-width:150px;max-height:150px;" />
+                                <input type="file" asp-for="@Model.FormFile" name="FormFile" class="form-control">
+                            </div>
+                            <div class="mb-3">
+                                <label for="example-fileinput" class="form-label">Entry</label>
+                                <input type="text" asp-for="@Model.Entry" name="Entry" class="form-control">
+                            </div>
+                            <div class="mb-3">
+                                <label for="example-fileinput" class="form-label">Tags</label>
+                                <input type="text" asp-for="@Model.Tag" name="Tag" value="@Model.Tag" class="form-control">
+                            </div>
+                            <input type="hidden" name="Id" value="@Model.Id" />
+                            <div style="text-align: right;">
+                                <button type="submit" class="btn btn-primary">Add</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div> <!-- end card-body -->
+        </div> <!-- end card-->
+    </div>
+</div><!-- end row -->
+
+
+<script>
+    ClassicEditor
+        .create(document.querySelector('#Content'))
+        .then(editor => {
+            console.log(editor);
+        })
+        .catch(error => {
+            console.error(error);
+        });
+    ClassicEditor
+        .create(document.querySelector('#ContentKr'))
+        .then(editor => {
+            console.log(editor);
+        })
+        .catch(error => {
+            console.error(error);
+        });
+    ClassicEditor
+        .create(document.querySelector('#ContentTr'))
+        .then(editor => {
+            console.log(editor);
+        })
+        .catch(error => {
+            console.error(error);
+        });
+
+</script>
+

@@ -1,0 +1,140 @@
+﻿@using Entities.Enum
+
+@{
+    ViewData["Title"] = "Add";
+    Layout = "~/Areas/Admin/Views/Shared/Admin_Layout.cshtml";
+}
+
+@model Tuple<List<BlogCategoryDto>,BlogDto>
+
+<!-- Start Content-->
+<div class="container-fluid">
+
+    <!-- end page title -->
+    <div class="row">
+
+        <div class="col-xl-6">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="header-title">Add Blog </h4>
+
+                </div>
+                <div class="card-body">
+                    <form action="/Blog/Add" method="post" enctype="multipart/form-data">
+                        <ul class="nav nav-pills bg-nav-pills nav-justified mb-3" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <a href="#english" data-bs-toggle="tab" aria-expanded="true" class="nav-link rounded-0 active" aria-selected="true" role="tab">
+                                    English
+                                </a>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <a href="#kurdish" data-bs-toggle="tab" aria-expanded="false" class="nav-link rounded-0 " aria-selected="false" role="tab" tabindex="-1">
+                                    Kurdish
+                                </a>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <a href="#turkish" data-bs-toggle="tab" aria-expanded="false" class="nav-link rounded-0 " aria-selected="false" role="tab" tabindex="-1">
+                                    Turkish
+                                </a>
+                            </li>
+                        </ul>
+
+                        <div class="tab-content">
+                            <select class="form-select form-select-sm mb-3" asp-for="Item2.BlogTypeId" id="BlogTypeId" name="BlogTypeId">
+                                <option selected="">Select Blog type</option>
+                                @foreach (var blogTypes in Enum.GetValues<BlogTypes>())
+                                {
+                                    <option value="@((int)blogTypes)">@blogTypes</option>
+                                }
+
+                            </select>
+                            <select class="form-select form-select-sm mb-3" id="BlogCategoriesId" asp-for="Item2.BlogCategoriesId" name="BlogCategoriesId">
+                                <option selected="">Select Category</option>
+                                @foreach (var item in Model.Item1)
+                                {
+                                    <option value="@item.Id">@item.Title</option>
+                                }
+                            </select>
+                            <div class="tab-pane active show" id="english" role="tabpanel">
+                                <div class="mb-3">
+                                    <label for="simpleinput" class="form-label">Name(En)</label>
+                                    <input type="text" name="Title" asp-for="Item2.Title" class="form-control">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="simpleinput" class="form-label">Content(En)</label>
+                                    <textarea id="Content" asp-for="Item2.Content" name="Content"></textarea>
+                                </div>
+                                
+                            </div>
+                            <div class="tab-pane" id="kurdish" role="tabpanel">
+
+                                <div class="mb-3">
+                                    <label for="simpleinput" class="form-label">Name(Kr)</label>
+                                    <input type="text" name="TitleKr" asp-for="Item2.TitleKr" class="form-control">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="simpleinput" class="form-label">Content(Kr)</label>
+                                    <textarea id="ContentKr" asp-for="Item2.ContentKr" name="ContentKr"></textarea>
+                                </div>
+                             
+                            </div>
+                            <div class="tab-pane" id="turkish" role="tabpanel">
+
+                                <div class="mb-3">
+                                    <label for="simpleinput" class="form-label">Name(Tr)</label>
+                                    <input type="text" name="TitleTr" asp-for="Item2.TitleTr" class="form-control">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="simpleinput" class="form-label">Content(Tr)</label>
+                                    <textarea id="ContentTr" asp-for="Item2.ContentTr" name="ContentTr"></textarea>
+                                </div>
+                               
+                            </div>
+                            <div class="mb-3">
+                                <label for="example-fileinput" class="form-label">Image</label>
+                                <input type="file" asp-for="Item2.FormFile" name="FormFile" class="form-control">
+                            </div>
+                            <div class="mb-3">
+                                <label for="example-fileinput" class="form-label">Tags</label>
+                                <input type="text" asp-for="Item2.Tags" name="Tags" class="form-control">
+                            </div>
+                            <div style="text-align: right;">
+                                <button type="submit" class="btn btn-primary">Add</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div> <!-- end card-body -->
+        </div> <!-- end card-->
+    </div>
+</div><!-- end row -->
+
+
+<script>
+    ClassicEditor
+        .create(document.querySelector('#Content'))
+        .then(editor => {
+            console.log(editor);
+        })
+        .catch(error => {
+            console.error(error);
+        });
+    ClassicEditor
+        .create(document.querySelector('#ContentKr'))
+        .then(editor => {
+            console.log(editor);
+        })
+        .catch(error => {
+            console.error(error);
+        });
+    ClassicEditor
+        .create(document.querySelector('#ContentTr'))
+        .then(editor => {
+            console.log(editor);
+        })
+        .catch(error => {
+            console.error(error);
+        });
+
+</script>
+

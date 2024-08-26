@@ -1,0 +1,124 @@
+﻿@{
+    ViewData["Title"] = "ShowImages";
+    Layout = "~/Areas/Admin/Views/Shared/Admin_Layout.cshtml";
+}
+
+@model Tuple<List<BlogImageDto>,int>
+
+<div class="container-fluid">
+    <!-- start page title -->
+    <div class="row">
+        <div class="col-12">
+            <div class="page-title-box">
+                <div class="page-title-right">
+                    <ol class="breadcrumb m-0">
+                        <li class="breadcrumb-item"><a href="javascript: void(0);">Admin</a></li>
+                        <li class="breadcrumb-item"><a href="javascript: void(0);">Blog Images</a></li>
+                        <li class="breadcrumb-item active">Show Blog Images</li>
+                    </ol>
+                </div>
+                <h4 class="page-title">Show Blog Images</h4>
+            </div>
+        </div>
+    </div>
+    <!-- end page title -->
+    <div class="row">
+        <div class="col-xl-12">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="header-title">Show Blog Images</h4>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive-sm">
+                        <div class="d-flex flex-wrap gap-2">
+                            <!-- Static Backdrop modal -->
+                            <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                               Add Blog Image
+                            </button>
+                        </div> <!-- btn list -->
+                        <!-- Modal -->
+                        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="staticBackdropLabel">Add Blog Image</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div> <!-- end modal header -->
+                                    <form  action="/Blog/AddBlogImage" method="post" enctype="multipart/form-data">
+                                        <input type="hidden" name="BlogId" value="@Model.Item2" />
+                                        <div class="modal-body">
+                                            <div class="mb-3">
+                                                <label for="example-fileinput" class="form-label">Image</label>
+                                                <input type="file" name="FormFile" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <button type="submit" class="btn btn-primary">Upload</button>
+                                        </div> <!-- end modal footer -->
+                                    </form>
+                                  
+                                </div> <!-- end modal content-->
+                            </div> <!-- end modal dialog-->
+                        </div> <!-- end modal-->
+                        @if (Model.Item1 is not null)
+                        {
+                            <table class="table table-striped table-centered mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>Id</th>
+                                        <th>Image</th>
+                                        <th style="text-align: right;">Delete</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                    @foreach (var item in Model.Item1)
+                                    {
+                                        <tr>
+                                            <td>@item.Id</td>
+                                            <td class="table-user">
+                                                <img src="~/@item.Image"
+                                                     class="me-2 rounded-circle" style="max-width:150px;max-height:150px;" />
+                                            </td>
+                                            <td style="text-align: right;">
+
+                                                <div style="display: inline-block;">
+                                                    <form>
+                                                        <input type="hidden" name="Id" value="@item.Id" />
+                                                        <button type="submit" class="btn btn-link text-reset fs-16 px-1">
+                                                            <i>@Html.ActionLink("", "DeleteBlogImage", new { id = item.Id }, new { @class = "ri-delete-bin-2-line", onclick = "return confirm('Are you sure you want to delete?')" })</i>
+                                                        </button>
+                                                    </form>
+                                                </div> <input value="@ViewBag.Message" id="bag" style="display:none;" />
+                                            </td>
+                                        </tr>
+                                    }
+
+
+                                </tbody>
+                            </table>
+                        }
+                    </div> <!-- end table-responsive-->
+                </div> <!-- end card body-->
+            </div> <!-- end card -->
+        </div><!-- end col-->
+    </div><!-- end row-->
+</div> <!-- container -->
+
+<script>
+    var data = document.getElementById("bag").value;
+    console.log("DATA " + data);
+    if (data == "Başarılı") {
+        swal("İşleminiz başarı ile gerçekleşti", {
+            icon: "success",
+            button: "Tamam!",
+        });
+    } else if (data == "Başarısız") {
+        swal("Hata oluştu daha sonra tekrar deneyin!", {
+            icon: "error",
+            button: "Tamam!",
+        });
+    }
+</script>
+

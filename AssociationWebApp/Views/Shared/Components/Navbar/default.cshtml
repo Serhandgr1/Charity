@@ -1,0 +1,85 @@
+﻿@inject IViewLocalizer localizer
+
+<div class="bar">
+    <div class="grid-container">
+        <div class="grid-x grid-margin-x">
+            <div class="cell small-12">
+                <p class="bar-phone">
+                    <i class="fas fa-phone"></i> @localizer["Call Us"] :
+                    <strong>
+                        <a href="tel:@Model?.Phone">@Model?.Phone</a>
+                    </strong>
+                </p>
+
+                <div class="bar-socials">
+                    <ul>
+                        <li><a href="@Url.Action("Index", "Survey")"><i class="ri-question-answer-line"></i>@localizer["Surveys"]</a></li>
+                        <li><a href="@Model?.Mapping"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="@Model?.Mapping"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="@Model?.Mapping"><i class="fab fa-google-plus-g"></i></a></li>
+                        <li><a href="@Model?.Mapping"><i class="fab fa-linkedin-in"></i></a></li>
+                        <partial name="_SelectLanguage" />
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<header class="header">
+    <div class="grid-container">
+        <div class="grid-x grid-margin-x">
+            <div class="cell small-12">
+                <a href="index.html" class="header-logo">
+                    <img src="~/assets/images/temp/logo.png" alt="@localizer["Charity | Foundation"]">
+                    <span class="site-description">@Model?.Logo</span>
+                </a>
+
+                <div class="header-inner">
+                    <a href="#" class="button-burger">
+                        <span></span>
+                    </a>
+
+                    <nav class="nav">
+                        <ul>
+                            <li>
+                                <a asp-controller="Home" asp-action="Index">@localizer["Home"]</a>
+                            </li>
+                            <li>
+                                <a asp-controller="AboutUs" asp-action="Index">@localizer["About Us"]</a>
+                                <ul>
+                                    <li><a asp-controller="AboutUs" asp-action="HtmlElements">@localizer["HTML Elements"]</a></li>
+                                    <li><a asp-controller="AboutUs" asp-action="Error404">@localizer["404 Error Page"]</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a asp-controller="Causes" asp-action="Index">@localizer["Causes"]</a>
+                                <ul>
+                                    <li><a asp-controller="Causes" asp-action="Detail" asp-route-id="1">@localizer["Single Cause"]</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a asp-controller="Events" asp-action="Index">@localizer["Events"]</a>
+                                <ul>
+                                    <li><a asp-controller="Events" asp-action="Detail" asp-route-id="1">@localizer["Single Event"]</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a asp-controller="Blog" asp-action="Index">@localizer["Blog"]</a>
+                            </li>
+                            <li>
+                                <a asp-controller="Staff" asp-action="Index">@localizer["Staff"]</a>
+                            </li>
+                            <li>
+                                <a asp-controller="Contact" asp-action="Index">@localizer["Contact Us"]</a>
+                            </li>
+                        </ul>
+                    </nav><!-- /.nav -->
+                    <div class="header-actions">
+                        <a asp-controller="Donate" asp-action="Index" class="button">@localizer["Donate"]</a>
+                    </div><!-- /.header-actions -->
+                </div><!-- /.header-inner -->
+            </div>
+        </div>
+    </div>
+</header>

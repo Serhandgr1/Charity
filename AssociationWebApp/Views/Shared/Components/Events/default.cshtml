@@ -1,0 +1,32 @@
+﻿@model BlogDto
+@inject IViewLocalizer localizer
+@if (Model != null)
+{
+    <div class="cause">
+        <div class="cause-image">
+            <a href="@Url.Action("Details", "Blog", new { id = Model.Id })">
+                @*<img src="@Model.Image" height="175" width="270" alt="@Model.Title">*@
+                <img style="width:270px; height:175px;" src="@Model.Image" />
+            </a>
+            <div class="cause-tag">@Model.BlogCategory</div><!-- /.cause-tag -->
+        </div><!-- /.cause-image -->
+
+        <div class="cause-body">
+            <div class="cause-head">
+                <h3 class="cause-title">@localizer[@Model.Title]</h3><!-- /.cause-title -->
+            </div><!-- /.cause-head -->
+
+            <div class="cause-entry">
+                <p>@localizer[Model.Content]</p>
+            </div><!-- /.cause-entry -->
+
+            <div class="cause-actions">
+                <a href="@Url.Action("Details", "Blog", new { id = Model.Id })" class="button">@localizer["Donate Now"]</a>
+            </div><!-- /.cause-actions -->
+        </div><!-- /.cause-body -->
+    </div>
+}
+else
+{
+    <p>No events found.</p> <!-- Eğer etkinlik yoksa mesaj göster -->
+}

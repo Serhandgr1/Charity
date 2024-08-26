@@ -1,0 +1,38 @@
+﻿@model IEnumerable<SliderDto>
+@inject IViewLocalizer localizer
+
+@foreach (var slider in Model)
+{
+    <li class="slide">
+        <div class="slide-image fullscreener">
+            <img style="width:890px; height:1800px;" src="@slider.Image" />
+        </div><!-- /.slide-image -->
+
+        <div class="slide-content">
+            <div class="grid-container">
+                <div class="grid-x grid-margin-x">
+
+                    <div class="cell small-12 large-7">
+                        <h2 class="slide-title">@localizer[slider.Title]</h2><!-- /.slide-title -->
+
+                        <div class="slide-entry">
+                            <p>@localizer[slider.Entry]</p>
+                        </div><!-- /.slide-entry -->
+                    </div><!-- /.cell large-7 -->
+
+                    <div class="cell small-12 large-5">
+                        <div class="slide-aside">
+                            <div class="slide-tag">@localizer[slider.Tag]</div><!-- /.slide-tag -->
+
+                            <div class="slide-actions">
+                                <a href="@Url.Action("Details", "Blog", new { id = slider.Id })">@localizer["Donate Now"]</a>
+                            </div><!-- /.slide-actions -->
+                        </div><!-- /.slide-aside -->
+                    </div><!-- /.cell large-5 -->
+
+                </div>
+            </div><!-- /.grid-container -->
+        </div><!-- /.slide-content -->
+    </li>
+    <!-- /.slide -->
+}

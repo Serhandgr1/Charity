@@ -1,0 +1,92 @@
+﻿@using AssociationWebApp.Extension
+
+@{
+    ViewData["Title"] = "Update Staff";
+    Layout = "~/Areas/Admin/Views/Shared/Admin_Layout.cshtml";
+}
+
+@model StaffDto
+
+<!-- Start Content-->
+<div class="container-fluid">
+    <!-- end page title -->
+    <div class="row">
+        <div class="col-xl-6">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="header-title">Update Staff</h4>
+                </div>
+                <div class="card-body">
+                    <form asp-action="Update" method="post" enctype="multipart/form-data">
+                        <ul class="nav nav-pills bg-nav-pills nav-justified mb-3" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <a href="#english" data-bs-toggle="tab" aria-expanded="true" class="nav-link rounded-0 active" aria-selected="true" role="tab">
+                                    English
+                                </a>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <a href="#kurdish" data-bs-toggle="tab" aria-expanded="false" class="nav-link rounded-0" aria-selected="false" role="tab">
+                                    Kurdish
+                                </a>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <a href="#turkish" data-bs-toggle="tab" aria-expanded="false" class="nav-link rounded-0" aria-selected="false" role="tab">
+                                    Turkish
+                                </a>
+                            </li>
+                        </ul>
+
+                        <div class="tab-content">
+                            <div class="tab-pane active show" id="english" role="tabpanel">
+                                <div class="mb-3">
+                                    <label for="FullName" class="form-label">Full Name</label>
+                                    <input type="text" asp-for="FullName" class="form-control">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="Content" class="form-label">Content (En)</label>
+                                    <textarea id="Content" asp-for="Content" class="form-control"></textarea>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="kurdish" role="tabpanel">
+                                <div class="mb-3">
+                                    <label for="ContentKr" class="form-label">Content (Kr)</label>
+                                    <textarea id="ContentKr" asp-for="ContentKr" class="form-control"></textarea>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="turkish" role="tabpanel">
+                                <div class="mb-3">
+                                    <label for="ContentTr" class="form-label">Content (Tr)</label>
+                                    <textarea id="ContentTr" asp-for="ContentTr" class="form-control"></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="FormFile" class="form-label">Image</label>
+                            <img src="~/@Model.Image" class="me-2 rounded-circle" style="max-width:150px;max-height:150px;" />
+                            <input type="file" asp-for="FormFile" class="form-control">
+                        </div>
+                        <input type="hidden" asp-for="Id" />
+                        <div style="text-align: right;">
+                            <button type="submit" class="btn btn-primary">Update</button>
+                        </div>
+                    </form>
+                </div>
+            </div> <!-- end card-body -->
+        </div> <!-- end card-->
+    </div>
+</div><!-- end row -->
+
+<script>
+    ClassicEditor
+        .create(document.querySelector('#Content'))
+        .catch(error => console.error(error));
+
+    ClassicEditor
+        .create(document.querySelector('#ContentKr'))
+        .catch(error => console.error(error));
+
+    ClassicEditor
+        .create(document.querySelector('#ContentTr'))
+        .catch(error => console.error(error));
+</script>

@@ -1,0 +1,346 @@
+﻿@inject IViewLocalizer Localizer
+
+<!DOCTYPE html>
+<html lang="en">
+<body>
+	<script type="text/javascript">
+		(function (i, s, o, g, r, a, m) {
+			i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+				(i[r].q = i[r].q || []).push(arguments)
+			}, i[r].l = 1 * new Date(); a = s.createElement(o),
+				m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+		})(window, document, 'script', '//www.google-analytics.com/analytics.js', '__gaTracker');
+
+		__gaTracker('create', 'UA-348094-43', 'auto', { 'allowLinker': true });
+		__gaTracker('set', 'forceSSL', true);
+		__gaTracker('require', 'linker');
+		__gaTracker('linker:autoLink', ['wplook.com']);
+		__gaTracker('send', 'pageview');
+	</script>
+
+	<div class="wrapper">
+		<div class="main">
+			<div class="main-head">
+				<div class="main-head-image fullscreener">
+					<img src="assets/images/temp/main-image-1.jpg" height="209" width="1800" alt="">
+				</div><!-- /.main-head-image fullscreener -->
+
+				<div class="main-head-content">
+					<div class="grid-container">
+						<div class="grid-x grid-margin-x">
+							<div class="cell small-12">
+								<h1 class="main-title">@Localizer["Make a donation"]</h1><!-- /.main-title -->
+
+								<ul class="breadcrumbs">
+									<li>
+										<a href="#">@Localizer["Home"]</a>
+									</li>
+
+									<li class="current">
+										<a href="#">@Localizer["Make a donation"]</a>
+									</li><!-- /.current -->
+								</ul><!-- /.breadcrumbs -->
+							</div><!-- /.cell small-12 -->
+						</div>
+					</div><!-- /.grid -->
+				</div><!-- /.main-head-content -->
+			</div><!-- /.main-head -->
+
+			<div class="main-body">
+				<div class="grid-container">
+					<div class="grid-x grid-margin-x">
+						<div class="cell small-12 large-8">
+							<div class="content">
+								<article class="post post-single format-gallery" itemscope itemtype="https://schema.org/BlogPosting">
+
+									<div class="post-body">
+										<div class="entry" itemprop="articleBody">
+
+											<h2>@Localizer["I wish to make a donation"]</h2>
+
+											<p>@Localizer["Waters made blessed creature dry fish have creature wherein living also fill from air can't to and it. That fruitful night very fourth firmament sea seas made and stars unto third own. Lesser form place seasons is above seas you seed itself lesser brought. Greater."]</p>
+											<div class="tabs-wrapper">
+
+												<ul class="tabs" data-tabs id="example-tabs">
+													<li class="tabs-title is-active"><a href="#panel1" aria-selected="true"><i class="fab fa-paypal"></i> @Localizer["PayPal"]</a></li>
+													<li class="tabs-title"><a data-tabs-target="panel2" href="#panel2"><i class="far fa-credit-card"></i> @Localizer["Credit Card"]</a></li>
+													<li class="tabs-title"><a data-tabs-target="panel3" href="#panel3"><i class="fas fa-university"></i> @Localizer["Bank Transfer"]</a></li>
+													<li class="tabs-title"><a data-tabs-target="panel4" href="#panel4"><i class="fas fa-money-check-alt"></i> @Localizer["Check Payment"]</a></li>
+												</ul>
+
+												<div class="tabs-content" data-tabs-content="example-tabs">
+													<div class="tabs-panel is-active" id="panel1">
+														<div class="form-donation">
+															<form action="?" method="post">
+																<fieldset>
+																	<legend>@Localizer["Donation Amount"]</legend>
+																	<div class="grid-x grid-margin-x">
+																		<div class="cell small-12 medium-9">
+																			<ul class="list-radios">
+																				<li>
+																					<div class="radio">
+																						<input type="radio" name="amount" id="field-25-usd-pp" value="@Localizer["$wplook_default_first_amount"]">
+																						<label for="field-25-usd-pp">25</label>
+																					</div><!-- /.radio -->
+																				</li>
+
+																				<li>
+																					<div class="radio">
+																						<input type="radio" name="amount" id="field-50-usd-pp" value="@Localizer["$wplook_default_second_amount"]">
+																						<label for="field-50-usd-pp">50</label>
+																					</div><!-- /.radio -->
+																				</li>
+
+																				<li>
+																					<div class="radio">
+																						<input type="radio" name="amount" id="field-100-usd-pp" value="@Localizer["$wplook_default_third_amount"]">
+																						<label for="field-100-usd-pp">100</label>
+																					</div><!-- /.radio -->
+																				</li>
+
+																				<li>
+																					<div class="radio">
+																						<input type="radio" name="amount" id="field-150-usd-pp" value="@Localizer["$wplook_default_fourth_amount"]">
+																						<label for="field-150-usd-pp">150</label>
+																					</div><!-- /.radio -->
+																				</li>
+
+																				<li>
+																					<div class="radio">
+																						<input type="radio" name="amount" id="field-200-usd-pp" value="@Localizer["$wplook_default_fifth_amount"]">
+																						<label for="field-200-usd-pp">200</label>
+																					</div><!-- /.radio -->
+																				</li>
+																				<li>
+																					<div class="radio">
+																						<input type="radio" name="amount" id="field-250-usd-pp" value="@Localizer["$wplook_default_sixth_amount"]">
+																						<label for="field-250-usd-pp">250</label>
+																					</div><!-- /.radio -->
+																				</li>
+																			</ul><!-- /.list-radios -->
+																		</div>
+																	</div>
+																</fieldset>
+
+																<fieldset>
+																	<legend>@Localizer["I give a donation for:"]</legend>
+																	<div class="grid-x grid-margin-x">
+																		<div class="large-12 cell small-12">
+																			<label class="label-donation-for">
+																				<select name="cause">
+																					<option value="General Donation">@Localizer["General Donation"]</option>
+																					<option value="Project 1">@Localizer["Project 1"]</option>
+																					<option value="Project 2">@Localizer["Project 2"]</option>
+																					<option value="Project 3">@Localizer["Project 3"]</option>
+																				</select>
+																			</label>
+																		</div>
+																	</div>
+																</fieldset>
+															</form>
+
+															<div class="form-actions">
+																<input type="submit" value="@Localizer["Donate Now"]" class="button">
+															</div>
+														</div><!-- /.form-donation -->
+													</div>
+
+													<!-- Visa Card -->
+													<div class="tabs-panel" id="panel2">
+														<div class="form-donation">
+															<form>
+																<fieldset>
+																	<legend>@Localizer["Donor Information"]</legend>
+																	<div class="grid-x grid-margin-x">
+																		<div class="cell small-12 medium-6">
+																			<label>
+																				@Localizer["First Name"] *
+																				<input value="" name="fname" type="text" placeholder="@Localizer["First Name"]">
+																			</label>
+																		</div>
+																		<div class="cell small-12 medium-6">
+																			<label>
+																				@Localizer["Last Name"] *
+																				<input value="" name="lname" type="text" placeholder="@Localizer["Last Name"]">
+																			</label>
+																		</div>
+																		<div class="cell small-12 medium-6">
+																			<label>
+																				@Localizer["Email"] *
+																				<input value="" name="email" type="text" placeholder="@Localizer["Email"]">
+																			</label>
+																		</div>
+																		<div class="cell small-12 medium-6">
+																			<label>
+																				@Localizer["Password"] *
+																				<input value="" name="password" type="password" placeholder="@Localizer["Password"]">
+																			</label>
+																		</div>
+																	</div>
+																</fieldset>
+
+																<div class="grid-x grid-margin-x">
+																	<div class="cell small-12 medium-6">
+																		<label>
+																			@Localizer["Card Number"] *
+																			<input value="" name="cardnumber" type="text" placeholder="@Localizer["Card Number"]">
+																		</label>
+																	</div>
+																	<div class="cell small-12 medium-3">
+																		<label>
+																			@Localizer["Expiry Date"] *
+																			<input value="" name="expdate" type="text" placeholder="@Localizer["MM/YYYY"]">
+																		</label>
+																	</div>
+																	<div class="cell small-12 medium-3">
+																		<label>
+																			@Localizer["CVV"] *
+																			<input value="" name="cvv" type="text" placeholder="@Localizer["CVV"]">
+																		</label>
+																	</div>
+																</div>
+
+																<div class="form-actions">
+																	<input type="submit" value="@Localizer["Donate Now"]" class="button">
+																</div>
+															</form>
+														</div><!-- /.form-donation -->
+													</div>
+
+													<!-- Bank Transfer -->
+													<div class="tabs-panel" id="panel3">
+														<div class="form-donation">
+															<form>
+																<fieldset>
+																	<legend>@Localizer["Donor Information"]</legend>
+																	<div class="grid-x grid-margin-x">
+																		<div class="cell small-12 medium-6">
+																			<label>
+																				@Localizer["First Name"] *
+																				<input value="" name="fname" type="text" placeholder="@Localizer["First Name"]">
+																			</label>
+																		</div>
+																		<div class="cell small-12 medium-6">
+																			<label>
+																				@Localizer["Last Name"] *
+																				<input value="" name="lname" type="text" placeholder="@Localizer["Last Name"]">
+																			</label>
+																		</div>
+																		<div class="cell small-12 medium-6">
+																			<label>
+																				@Localizer["Email"] *
+																				<input value="" name="email" type="text" placeholder="@Localizer["Email"]">
+																			</label>
+																		</div>
+																		<div class="cell small-12 medium-6">
+																			<label>
+																				@Localizer["Password"] *
+																				<input value="" name="password" type="password" placeholder="@Localizer["Password"]">
+																			</label>
+																		</div>
+																	</div>
+																</fieldset>
+
+																<fieldset>
+																	<legend>@Localizer["Bank Information"]</legend>
+																	<div class="grid-x grid-margin-x">
+																		<div class="cell small-12">
+																			<label>
+																				@Localizer["Bank Name"] *
+																				<input value="" name="bankname" type="text" placeholder="@Localizer["Bank Name"]">
+																			</label>
+																		</div>
+																		<div class="cell small-12">
+																			<label>
+																				@Localizer["Bank Account"] *
+																				<input value="" name="bankaccount" type="text" placeholder="@Localizer["Bank Account"]">
+																			</label>
+																		</div>
+																		<div class="cell small-12">
+																			<label>
+																				@Localizer["Bank Routing Number"] *
+																				<input value="" name="routingnumber" type="text" placeholder="@Localizer["Bank Routing Number"]">
+																			</label>
+																		</div>
+																	</div>
+																</fieldset>
+
+																<div class="form-actions">
+																	<input type="submit" value="@Localizer["Donate Now"]" class="button">
+																</div>
+															</form>
+														</div><!-- /.form-donation -->
+													</div>
+
+													<!-- Check Payment -->
+													<div class="tabs-panel" id="panel4">
+														<div class="form-donation">
+															<form>
+																<fieldset>
+																	<legend>@Localizer["Donor Information"]</legend>
+																	<div class="grid-x grid-margin-x">
+																		<div class="cell small-12 medium-6">
+																			<label>
+																				@Localizer["First Name"] *
+																				<input value="" name="fname" type="text" placeholder="@Localizer["First Name"]">
+																			</label>
+																		</div>
+																		<div class="cell small-12 medium-6">
+																			<label>
+																				@Localizer["Last Name"] *
+																				<input value="" name="lname" type="text" placeholder="@Localizer["Last Name"]">
+																			</label>
+																		</div>
+																		<div class="cell small-12 medium-6">
+																			<label>
+																				@Localizer["Email"] *
+																				<input value="" name="email" type="text" placeholder="@Localizer["Email"]">
+																			</label>
+																		</div>
+																		<div class="cell small-12 medium-6">
+																			<label>
+																				@Localizer["Password"] *
+																				<input value="" name="password" type="password" placeholder="@Localizer["Password"]">
+																			</label>
+																		</div>
+																	</div>
+																</fieldset>
+
+																<fieldset>
+																	<legend>@Localizer["Check Information"]</legend>
+																	<div class="grid-x grid-margin-x">
+																		<div class="cell small-12">
+																			<label>
+																				@Localizer["Check Number"] *
+																				<input value="" name="checknumber" type="text" placeholder="@Localizer["Check Number"]">
+																			</label>
+																		</div>
+																		<div class="cell small-12">
+																			<label>
+																				@Localizer["Bank Name"] *
+																				<input value="" name="bankname" type="text" placeholder="@Localizer["Bank Name"]">
+																			</label>
+																		</div>
+																	</div>
+																</fieldset>
+
+																<div class="form-actions">
+																	<input type="submit" value="@Localizer["Donate Now"]" class="button">
+																</div>
+															</form>
+														</div><!-- /.form-donation -->
+													</div>
+												</div><!-- /.tabs-content -->
+											</div><!-- /.tabs-wrapper -->
+										</div><!-- /.entry -->
+									</div><!-- /.post-body -->
+								</article><!-- /.post post-single format-gallery -->
+							</div><!-- /.content -->
+						</div><!-- /.cell small-12 large-8 -->
+					</div><!-- /.grid-x grid-margin-x -->
+				</div><!-- /.grid-container -->
+			</div><!-- /.main-body -->
+		</div><!-- /.main -->
+	</div><!-- /.wrapper -->
+</body>
+</html>

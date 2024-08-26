@@ -1,0 +1,112 @@
+﻿@using AssociationWebApp.Areas.Admin.Controllers
+@using AssociationWebApp.Extension
+@using Entities.Enum
+
+@{
+    ViewData["Title"] = "Show";
+    Layout = "~/Areas/Admin/Views/Shared/Admin_Layout.cshtml";
+}
+
+@model List<BlogDto>
+<div class="container-fluid">
+    <!-- start page title -->
+    <div class="row">
+        <div class="col-12">
+            <div class="page-title-box">
+                <div class="page-title-right">
+                    <ol class="breadcrumb m-0">
+                        <li class="breadcrumb-item"><a href="javascript: void(0);">Admin</a></li>
+                        <li class="breadcrumb-item"><a href="javascript: void(0);">Blogs</a></li>
+                        <li class="breadcrumb-item active">Show Blog</li>
+                    </ol>
+                </div>
+                <h4 class="page-title">Show Blog</h4>
+            </div>
+        </div>
+    </div>
+    <!-- end page title -->
+    <div class="row">
+        <div class="col-xl-12">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="header-title">Show Blog</h4>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive-sm">
+                        <table class="table table-striped table-centered mb-0">
+                            <thead>
+                                <tr>
+                                    <th>Category</th>
+                                    <th>Category Type</th>
+                                    <th>Title</th>
+                                    <th>Image</th>
+                                    <th style="text-align: right;">Update / Delete / Images</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                   
+                                    <tr>
+                                        <td>@item.BlogCategory</td>
+                                        <td>@Enum.GetName(typeof(BlogTypes), item.BlogTypeId)</td>
+                                        <td>@item.Title</td>
+                                        <td class="table-user">
+                                            <img src="~/@item.Image"
+                                                 class="me-2 rounded-circle" style="max-width:150px;max-height:150px;" />
+                                        </td>
+                                        <td style="text-align: right;">
+                                            <div style="display: inline-block;">
+                                                <form method="get" action="/Blog/Update">
+                                                    <input type="hidden" name="Id" value="@item.Id" />
+                                                    <button type="submit" class="btn btn-link text-reset fs-16 px-1">
+                                                        <i class="ri-settings-3-line"></i>
+                                                    </button>
+                                                </form>
+                                            </div>
+                                            <div style="display: inline-block;">
+                                                <form>
+                                                    <input type="hidden" name="Id" value="@item.Id" />
+                                                    <button type="submit" class="btn btn-link text-reset fs-16 px-1">
+                                                        <i>@Html.ActionLink("", "Delete", new { id = item.Id }, new { @class = "ri-delete-bin-2-line", onclick = "return confirm('Are you sure you want to delete?')" })</i>
+                                                    </button>
+                                                </form>
+                                            </div> <input value="@ViewBag.Message" id="bag" style="display:none;" />
+                                            <div style="display: inline-block;">
+                                                <form method="get" action="/Blog/ShowImages">
+                                                    <input type="hidden" name="BlogId" value="@item.Id" />
+                                                    <button type="submit" class="btn btn-link text-reset fs-16 px-1">
+                                                        <i class="ri-image-line"></i>
+                                                    </button>
+                                                </form>
+                                            </div>
+                                           
+
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div> <!-- end table-responsive-->
+                </div> <!-- end card body-->
+            </div> <!-- end card -->
+        </div><!-- end col-->
+    </div><!-- end row-->
+</div> <!-- container -->
+
+<script>
+    var data = document.getElementById("bag").value;
+    console.log("DATA " + data);
+    if (data == "Başarılı") {
+        swal("İşleminiz başarı ile gerçekleşti", {
+            icon: "success",
+            button: "Tamam!",
+        });
+    } else if (data == "Başarısız") {
+        swal("Hata oluştu daha sonra tekrar deneyin!", {
+            icon: "error",
+            button: "Tamam!",
+        });
+    }
+</script>
+
